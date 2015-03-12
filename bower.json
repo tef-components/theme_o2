@@ -1,11 +1,11 @@
 {
-  "name": "theme-movistar",
-  "version": "0.1.1",
-  "homepage": "https://github.com/tef-components/theme-movistar",
+  "name": "theme-o2",
+  "version": "0.2.1",
+  "homepage": "https://github.com/tef-components/theme-o2",
   "authors": [
     "the TEF components team"
   ],
-  "description": "TEF components - theme-movistar",
+  "description": "TEF components - theme-o2",
   "main": "index.html",
   "license": "MIT",
   "ignore": [
