@@ -8,7 +8,7 @@ module.exports = function(grunt) {
           optimization: 2
         },
         files: {
-          'css/o2.components.css': 'less/theme.less',
+          'css/components.o2.css': 'less/theme.less',
           'css/components/buttons.css': 'less/buttons.less',
           'css/components/button-groups.css': 'less/button-groups.less',
           'css/components/dropdowns.css': 'less/dropdowns.less',
@@ -30,9 +30,9 @@ module.exports = function(grunt) {
       default: {
        src: [
           '../icons/icons.css',
-          'css/o2.components.css',
+          'css/components.o2.css',
         ],
-        dest: 'css/o2.components.css'
+        dest: 'css/components.o2.css'
       }
     },
 
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          'css/o2.components.min.css': 'css/o2.components.css',
+          'css/components.o2.min.css': 'css/components.o2.css',
           'css/components/buttons.min.css': 'css/components/buttons.css',
           'css/components/button-groups.min.css': 'css/components/button-groups.css',
           'css/components/dropdowns.min.css': 'css/components/dropdowns.css',

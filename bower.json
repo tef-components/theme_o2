@@ -1,11 +1,11 @@
 {
-  "name": "theme-o2",
-  "version": "0.2.1",
-  "homepage": "https://github.com/tef-components/theme-o2",
+  "name": "theme_o2",
+  "version": "0.2.2",
+  "homepage": "https://github.com/tef-components/theme_o2",
   "authors": [
     "the TEF components team"
   ],
-  "description": "TEF components - theme-o2",
+  "description": "TEF components - theme_o2",
   "main": "index.html",
   "license": "MIT",
   "ignore": [
