@@ -80,7 +80,7 @@ module.exports = function(grunt) {
     includes: {
       files: {
         cwd: 'templates/',
-        src: '**/*.html',
+        src: '**/*.js',
         dest: ''
       }
     }
