@@ -17,9 +17,9 @@ label {
   font-family: "Arial", sans-serif;
   color: black;
   font-size: 15px;
-  line-height: 1.42857;
+  line-height: auto;
+  padding: 7px 9px;
   border: 1px solid #cfcece;
-  padding: 5px 9px;
   border-radius: 4px;
   box-sizing: border-box;
   white-space: nowrap;
@@ -35,7 +35,7 @@ label {
 .tef-input:hover,
 .tef-input:focus,
 .tef-input:active {
-  padding: 4px 8px;
+  padding: 6px 8px;
   border: 2px solid #686868;
   outline: none;
 }
@@ -109,44 +109,44 @@ label {
 .tef-negative .tef-message {
   background-color: #990000;
 }
-.tef-form-row,
-.tef-form-group {
+.tef-row,
+.tef-group {
   display: block;
   position: relative;
   margin-bottom: 10px;
 }
-.tef-form-row label,
-.tef-form-group label {
+.tef-row label,
+.tef-group label {
   display: block;
 }
-.tef-form-row > * ~ input,
-.tef-form-group > * ~ input {
+.tef-row > * ~ input,
+.tef-group > * ~ input {
   margin-left: 6px;
 }
-.tef-form-row > label + *,
-.tef-form-group > label + *,
-.tef-form-row > .tef-message,
-.tef-form-group > .tef-message {
+.tef-row > label + *,
+.tef-group > label + *,
+.tef-row > .tef-message,
+.tef-group > .tef-message {
   margin-left: 0;
 }
-.tef-form-group > * {
+.tef-group > * {
   border-radius: 0 !important;
 }
-.tef-form-group > *:first-child,
-.tef-form-group > *:first-child > button {
+.tef-group > *:first-child,
+.tef-group > *:first-child > button {
   border-radius: 4px 0 0 4px !important;
 }
-.tef-form-group > *:last-child,
-.tef-form-group > *:last-child > button {
+.tef-group > *:last-child,
+.tef-group > *:last-child > button {
   border-radius: 0 4px 4px 0 !important;
 }
-.tef-form-group > *:first-child:last-child {
+.tef-group > *:first-child:last-child {
   border-radius: 4px !important;
 }
-.tef-form-group > * ~ * {
+.tef-group > * ~ * {
   margin: 0 0 0 -4px !important;
 }
-.tef-form-group .tef-button + .tef-button {
+.tef-group .tef-button + .tef-button {
   margin: 0 0 0 -3px !important;
 }
 [disabled],
