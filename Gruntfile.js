@@ -83,6 +83,14 @@ module.exports = function(grunt) {
         src: '**/*.js',
         dest: ''
       }
+    },
+
+    bump: {
+      options : {
+        files: ['bower.json'],
+        commitFiles: ["-a"],
+        pushTo: 'origin'
+      }
     }
   });
 
@@ -92,6 +100,7 @@ module.exports = function(grunt) {
     'concat',
     'cssmin',
     'replace',
-    'includes'
+    'includes',
+    'bump'
   ]);
 };
