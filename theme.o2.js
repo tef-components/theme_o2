@@ -1,61 +1,229 @@
-//Function that sets the CoreStyle variables
+// Function that sets the CoreStyle variables
 var setVars = function(){
-	//
-	// Variables
-	//
+  CoreStyle.g.color =
+    "#2280a6";
 
-	// Theme colors
-	CoreStyle.g.color = "#2280a6";
-	CoreStyle.g.colorHover = "#267a9c";
-	CoreStyle.g.colorActive = "#398daf";
-	CoreStyle.g.positive = "#01b7b4";
-	CoreStyle.g.positiveHover = "#08aca9";
-	CoreStyle.g.positiveActive = "#1bbebc";
-	CoreStyle.g.negative = "#990000";
-	CoreStyle.g.negativeHover = "#910707";
-	CoreStyle.g.negativeActive = "#a31a1a";
-	CoreStyle.g.subdued = "#686868";
-	CoreStyle.g.subduedHover = "#656565";
-	CoreStyle.g.subduedActive = "#777777";
-	CoreStyle.g.significant = "#686868";
-	CoreStyle.g.significantHover = "#656565";
-	CoreStyle.g.significantActive = "#777777";
+  CoreStyle.g.text =
+    "white";
 
-	// Common colors
-	CoreStyle.g.neutral = "#84959e";
-	CoreStyle.g.neutralHover = "#7e8d95";
-	CoreStyle.g.neutralActive = "#91a0a8";
-	CoreStyle.g.grey1 = "#f2f2f2";
-	CoreStyle.g.grey2 = "#cfcece";
-	CoreStyle.g.grey3 = "#b3b5b7";
-	CoreStyle.g.grey4 = "#aeadad";
-	CoreStyle.g.grey5 = "#686868";
-	CoreStyle.g.grey6 = "#31313d";
+  CoreStyle.g.border =
+    "#2280a6";
 
-	// Breakpoints
-	CoreStyle.g.widthXS = "480px";
-	CoreStyle.g.widthSM = "768px";
-	CoreStyle.g.widthMD = "992px";
-	CoreStyle.g.widthLG = "1200px";
-	CoreStyle.g.widthXL = "1400px";
+  CoreStyle.g.colorHover =
+    "#1e7091";
 
-	// Min and Max widths
-	CoreStyle.g.widthMin = "320px";
+  CoreStyle.g.textHover =
+    "#ffffff";
 
-	CoreStyle.g.widthMaxSM = "CoreStyle.g.widthSM - 40px";
-	CoreStyle.g.widthMaxMD = "CoreStyle.g.widthMD - 40px";
-	CoreStyle.g.widthMaxLG = "CoreStyle.g.widthLG - 40px";
-	CoreStyle.g.widthMaxXL = "CoreStyle.g.widthXL - 40px";
+  CoreStyle.g.borderHover =
+    "#1e7091";
 
-	// Grid variables
-	CoreStyle.g.gutter = "1.6%";
-	CoreStyle.g.columnGutter = "CoreStyle.g.gutter / 2";
+  CoreStyle.g.colorActive =
+    "#195f7c";
+
+  CoreStyle.g.textActive =
+    "#ffffff";
+
+  CoreStyle.g.borderActive =
+    "#195f7c";
+
+  CoreStyle.g.positive =
+    "#01b7b4";
+
+  CoreStyle.g.positiveText =
+    "#ffffff";
+
+  CoreStyle.g.positiveBorder =
+    "#01b7b4";
+
+  CoreStyle.g.positiveHover =
+    "#019e9b";
+
+  CoreStyle.g.positiveTextHover =
+    "#ffffff";
+
+  CoreStyle.g.positiveBorderHover =
+    "#019e9b";
+
+  CoreStyle.g.positiveActive =
+    "#018482";
+
+  CoreStyle.g.positiveTextActive =
+    "#ffffff";
+
+  CoreStyle.g.positiveBorderActive =
+    "#018482";
+
+  CoreStyle.g.negative =
+    "#990000";
+
+  CoreStyle.g.negativeText =
+    "#ffffff";
+
+  CoreStyle.g.negativeBorder =
+    "#990000";
+
+  CoreStyle.g.negativeHover =
+    "#800000";
+
+  CoreStyle.g.negativeTextHover =
+    "#ffffff";
+
+  CoreStyle.g.negativeBorderHover =
+    "#800000";
+
+  CoreStyle.g.negativeActive =
+    "#660000";
+
+  CoreStyle.g.negativeTextActive =
+    "#ffffff";
+
+  CoreStyle.g.negativeBorderActive =
+    "#660000";
+
+  CoreStyle.g.subdued =
+    "#686868";
+
+  CoreStyle.g.subduedText =
+    "#ffffff";
+
+  CoreStyle.g.subduedBorder =
+    "#686868";
+
+  CoreStyle.g.subduedHover =
+    "#5b5b5b";
+
+  CoreStyle.g.subduedTextHover =
+    "#ffffff";
+
+  CoreStyle.g.subduedBorderHover =
+    "#5b5b5b";
+
+  CoreStyle.g.subduedActive =
+    "#4f4f4f";
+
+  CoreStyle.g.subduedTextActive =
+    "#ffffff";
+
+  CoreStyle.g.subduedBorderActive =
+    "#4f4f4f";
+
+  CoreStyle.g.significant =
+    "#686868";
+
+  CoreStyle.g.significantText =
+    "#ffffff";
+
+  CoreStyle.g.significantBorder =
+    "#686868";
+
+  CoreStyle.g.significantHover =
+    "#5b5b5b";
+
+  CoreStyle.g.significantTextHover =
+    "#ffffff";
+
+  CoreStyle.g.significantBorderHover =
+    "#5b5b5b";
+
+  CoreStyle.g.significantActive =
+    "#4f4f4f";
+
+  CoreStyle.g.significantTextActive =
+    "#ffffff";
+
+  CoreStyle.g.significantBorderActive =
+    "#4f4f4f";
+
+  CoreStyle.g.neutral =
+    "#84959e";
+
+  CoreStyle.g.neutralText =
+    "#ffffff";
+
+  CoreStyle.g.neutralBorder =
+    "#84959e";
+
+  CoreStyle.g.neutralHover =
+    "#768993";
+
+  CoreStyle.g.neutralTextHover =
+    "#ffffff";
+
+  CoreStyle.g.neutralBorderHover =
+    "#768993";
+
+  CoreStyle.g.neutralActive =
+    "#697c86";
+
+  CoreStyle.g.neutralTextActive =
+    "#ffffff";
+
+  CoreStyle.g.neutralBorderActive =
+    "#697c86";
+
+  CoreStyle.g.grey1 =
+    "#f2f2f2";
+
+  CoreStyle.g.grey2 =
+    "#cfcece";
+
+  CoreStyle.g.grey3 =
+    "#b3b5b7";
+
+  CoreStyle.g.grey4 =
+    "#aeadad";
+
+  CoreStyle.g.grey5 =
+    "#686868";
+
+  CoreStyle.g.grey6 =
+    "#31313d";
+
+  CoreStyle.g.widthXS =
+    "480px";
+
+  CoreStyle.g.widthSM =
+    "768px";
+
+  CoreStyle.g.widthMD =
+    "992px";
+
+  CoreStyle.g.widthLG =
+    "1200px";
+
+  CoreStyle.g.widthXL =
+    "1400px";
+
+  CoreStyle.g.widthMin =
+    "320px";
+
+  CoreStyle.g.widthMaxSM =
+    "728px";
+
+  CoreStyle.g.widthMaxMD =
+    "952px";
+
+  CoreStyle.g.widthMaxLG =
+    "1160px";
+
+  CoreStyle.g.widthMaxXL =
+    "1360px";
+
+  CoreStyle.g.gutter =
+    "1.6%";
+
+  CoreStyle.g.columnGutter =
+    "0.8%";
+
 
 }
 
-if (typeof CoreStyle === 'undefined'){//If core-style has not been loaded we set setVars() to execute when polymer is ready
-	window.addEventListener('polymer-ready', setVars);
-}else{//If core-style has already been loaded we execute setVars() 
-	setVars();
+if (typeof CoreStyle === 'undefined'){
+  // If core-style has not been loaded we set setVars()
+  // to execute when polymer is ready
+  window.addEventListener('polymer-ready', setVars);
+} else {
+  // If core-style has already been loaded we execute setVars()
+  setVars();
 }
-

@@ -1,50 +1,94 @@
 //
-// Variables
+@import "../less/variables.less";
 //
 
 // Theme colors
-CoreStyle.g.color = "#2280a6";
-CoreStyle.g.colorHover = "#267a9c";
-CoreStyle.g.colorActive = "#398daf";
-CoreStyle.g.positive = "#01b7b4";
-CoreStyle.g.positiveHover = "#08aca9";
-CoreStyle.g.positiveActive = "#1bbebc";
-CoreStyle.g.negative = "#990000";
-CoreStyle.g.negativeHover = "#910707";
-CoreStyle.g.negativeActive = "#a31a1a";
-CoreStyle.g.subdued = "#686868";
-CoreStyle.g.subduedHover = "#656565";
-CoreStyle.g.subduedActive = "#777777";
-CoreStyle.g.significant = "#686868";
-CoreStyle.g.significantHover = "#656565";
-CoreStyle.g.significantActive = "#777777";
+// Keep 4 spaces before @ in order to do a correct
+// valiable replacement for Web Components
+
+.CoreStyle-color { fake-property: #2280a6; }
+.CoreStyle-text { fake-property: white; }
+.CoreStyle-border { fake-property: @color; }
+.CoreStyle-colorHover { fake-property: darken(@color,5%); }
+.CoreStyle-textHover { fake-property: @text; }
+.CoreStyle-borderHover { fake-property: @colorHover; }
+.CoreStyle-colorActive { fake-property: darken(@color,10%); }
+.CoreStyle-textActive { fake-property: @text; }
+.CoreStyle-borderActive { fake-property: @colorActive; }
+
+.CoreStyle-positive { fake-property: #01b7b4; }
+.CoreStyle-positiveText { fake-property: @text; }
+.CoreStyle-positiveBorder { fake-property: @positive; }
+.CoreStyle-positiveHover { fake-property: darken(@positive,5%); }
+.CoreStyle-positiveTextHover { fake-property: @positiveText; }
+.CoreStyle-positiveBorderHover { fake-property: @positiveHover; }
+.CoreStyle-positiveActive { fake-property: darken(@positive,10%); }
+.CoreStyle-positiveTextActive { fake-property: @positiveText; }
+.CoreStyle-positiveBorderActive { fake-property: @positiveActive; }
+
+.CoreStyle-negative { fake-property: #990000; }
+.CoreStyle-negativeText { fake-property: @text; }
+.CoreStyle-negativeBorder { fake-property: @negative; }
+.CoreStyle-negativeHover { fake-property: darken(@negative,5%); }
+.CoreStyle-negativeTextHover { fake-property: @negativeText; }
+.CoreStyle-negativeBorderHover { fake-property: @negativeHover; }
+.CoreStyle-negativeActive { fake-property: darken(@negative,10%); }
+.CoreStyle-negativeTextActive { fake-property: @negativeText; }
+.CoreStyle-negativeBorderActive { fake-property: @negativeActive; }
+
+.CoreStyle-subdued { fake-property: #686868; }
+.CoreStyle-subduedText { fake-property: @text; }
+.CoreStyle-subduedBorder { fake-property: @subdued; }
+.CoreStyle-subduedHover { fake-property: darken(@subdued,5%); }
+.CoreStyle-subduedTextHover { fake-property: @subduedText; }
+.CoreStyle-subduedBorderHover { fake-property: @subduedHover; }
+.CoreStyle-subduedActive { fake-property: darken(@subdued,10%); }
+.CoreStyle-subduedTextActive { fake-property: @subduedText; }
+.CoreStyle-subduedBorderActive { fake-property: @subduedActive; }
+
+.CoreStyle-significant { fake-property: #686868; }
+.CoreStyle-significantText { fake-property: @text; }
+.CoreStyle-significantBorder { fake-property: @significant; }
+.CoreStyle-significantHover { fake-property: darken(@significant,5%); }
+.CoreStyle-significantTextHover { fake-property: @significantText; }
+.CoreStyle-significantBorderHover { fake-property: @significantHover; }
+.CoreStyle-significantActive { fake-property: darken(@significant,10%); }
+.CoreStyle-significantTextActive { fake-property: @significantText; }
+.CoreStyle-significantBorderActive { fake-property: @significantActive; }
 
 // Common colors
-CoreStyle.g.neutral = "#84959e";
-CoreStyle.g.neutralHover = "#7e8d95";
-CoreStyle.g.neutralActive = "#91a0a8";
-CoreStyle.g.grey1 = "#f2f2f2";
-CoreStyle.g.grey2 = "#cfcece";
-CoreStyle.g.grey3 = "#b3b5b7";
-CoreStyle.g.grey4 = "#aeadad";
-CoreStyle.g.grey5 = "#686868";
-CoreStyle.g.grey6 = "#31313d";
+.CoreStyle-neutral { fake-property: #84959e; }
+.CoreStyle-neutralText { fake-property: @text; }
+.CoreStyle-neutralBorder { fake-property: @neutral; }
+.CoreStyle-neutralHover { fake-property: darken(@neutral,5%); }
+.CoreStyle-neutralTextHover { fake-property: @neutralText; }
+.CoreStyle-neutralBorderHover { fake-property: @neutralHover; }
+.CoreStyle-neutralActive { fake-property: darken(@neutral,10%); }
+.CoreStyle-neutralTextActive { fake-property: @positiveText; }
+.CoreStyle-neutralBorderActive { fake-property: @neutralActive; }
+
+.CoreStyle-grey1 { fake-property: #f2f2f2; }
+.CoreStyle-grey2 { fake-property: #cfcece; }
+.CoreStyle-grey3 { fake-property: #b3b5b7; }
+.CoreStyle-grey4 { fake-property: #aeadad; }
+.CoreStyle-grey5 { fake-property: #686868; }
+.CoreStyle-grey6 { fake-property: #31313d; }
 
 // Breakpoints
-CoreStyle.g.widthXS = "480px";
-CoreStyle.g.widthSM = "768px";
-CoreStyle.g.widthMD = "992px";
-CoreStyle.g.widthLG = "1200px";
-CoreStyle.g.widthXL = "1400px";
+.CoreStyle-widthXS { fake-property: 480px; }
+.CoreStyle-widthSM { fake-property: 768px; }
+.CoreStyle-widthMD { fake-property: 992px; }
+.CoreStyle-widthLG { fake-property: 1200px; }
+.CoreStyle-widthXL { fake-property: 1400px; }
 
 // Min and Max widths
-CoreStyle.g.widthMin = "320px";
+.CoreStyle-widthMin { fake-property: 320px; }
 
-CoreStyle.g.widthMaxSM = "CoreStyle.g.widthSM - 40px";
-CoreStyle.g.widthMaxMD = "CoreStyle.g.widthMD - 40px";
-CoreStyle.g.widthMaxLG = "CoreStyle.g.widthLG - 40px";
-CoreStyle.g.widthMaxXL = "CoreStyle.g.widthXL - 40px";
+.CoreStyle-widthMaxSM { fake-property: @widthSM - 40px; }
+.CoreStyle-widthMaxMD { fake-property: @widthMD - 40px; }
+.CoreStyle-widthMaxLG { fake-property: @widthLG - 40px; }
+.CoreStyle-widthMaxXL { fake-property: @widthXL - 40px; }
 
 // Grid variables
-CoreStyle.g.gutter = "1.6%";
-CoreStyle.g.columnGutter = "CoreStyle.g.gutter / 2";
+.CoreStyle-gutter { fake-property: 1.6%; }
+.CoreStyle-columnGutter { fake-property: @gutter / 2; }

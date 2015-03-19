@@ -4,11 +4,9 @@ module.exports = function(grunt) {
   grunt.initConfig({
     less: {
       default: {
-        options: {
-          optimization: 2
-        },
         files: {
           'css/components.o2.css': 'less/theme.less',
+          'templates/variables.css': 'templates/variables.less',
           'css/components/buttons.css': 'less/buttons.less',
           'css/components/button-groups.css': 'less/button-groups.less',
           'css/components/dropdowns.css': 'less/dropdowns.less',
@@ -52,31 +50,65 @@ module.exports = function(grunt) {
       }
     },
 
+    // reformating  variables.less to create a core-styles compliant file
+    // to be used in Web components
     replace: {
-      dist: {
+      preless: {
+        options: {
+          patterns: [
+            { match: '    @', replacement: '.CoreStyle-' },
+            { match: ': ', replacement: ' { fake-property: ' },
+            { match: ';', replacement: '; }' }
+          ],
+          usePrefix: false
+        },
+        files: [
+          {
+            expand: true, flatten: true,
+            src: ['less/variables.less'], dest: 'templates/'
+          }
+        ]
+      },
+
+      import: {
         options: {
           patterns: [
             {
-              match: '@',
-              replacement: 'CoreStyle.g.'
-            },
-            {
-              match: ': ',
-              replacement: ' = "'
-            },
-            {
-              match: ';',
-              replacement: '";'
+              match: '// Variables',
+              replacement: '@import "../less/variables.less";'
             }
           ],
           usePrefix: false
         },
         files: [
-          {expand: true, flatten: true, src: ['less/variables.less'], dest: 'templates/'}
+          {
+            expand: true, flatten: true,
+            src: ['templates/variables.less'], dest: 'templates/'
+          }
+        ]
+      },
+
+      final: {
+        options: {
+          patterns: [
+            { match: '.CoreStyle-', replacement: 'CoreStyle.g.' },
+            { match: '{', replacement: '=' },
+            { match: 'fake-property: ', replacement: '"' },
+            { match: ';', replacement: '";' },
+            { match: '}', replacement: '' },
+          ],
+          usePrefix: false
+        },
+        files: [
+          {
+            expand: true, flatten: true,
+            src: ['templates/variables.css'], dest: 'templates/'
+          }
         ]
       }
     },
 
+    // create theme*.js to to be used in Web Components
     includes: {
       files: {
         cwd: 'templates/',
@@ -86,21 +118,71 @@ module.exports = function(grunt) {
     },
 
     bump: {
+      // upgrade release and push to master
       options : {
         files: ['bower.json'],
         commitFiles: ["-a"],
         pushTo: 'origin'
+      }
+    },
+
+    exec: {
+      // add new files before commiting
+      add: {
+        command: 'git add .'
+      },
+
+      // push to gh-pages branch
+      pages: {
+        command: [
+          'git checkout gh-pages',
+          'git pull origin master',
+          'git push origin gh-pages',
+          'git checkout master'
+        ].join('&&')
+      }
+    },
+
+    watch: {
+      styles: {
+        files: ['../**/less/*.less'],
+        tasks: ['less', 'concat'],
+        options: {
+          nospawn: true,
+          livereload: true
+        }
       }
     }
   });
 
   grunt.registerTask('default', [
     'less',
+    'concat',
+    'watch'
+  ]);
+
+  grunt.registerTask('webcomponents', [
+    'replace:preless',
+    'replace:import',
+    'less',
+    'replace:final',
     'autoprefixer',
     'concat',
     'cssmin',
-    'replace',
+    'includes'
+  ]);
+
+  grunt.registerTask('release', [
+    'replace:preless',
+    'replace:import',
+    'less',
+    'replace:final',
+    'autoprefixer',
+    'concat',
+    'cssmin',
     'includes',
-    'bump'
+    'exec:add',
+    'bump',
+    'exec:pages'
   ]);
 };

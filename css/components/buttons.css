@@ -9,14 +9,14 @@ button::-moz-focus-inner {
   max-width: 200px;
   background-image: none;
   background-color: #2280a6;
-  color: white;
+  color: #ffffff;
   font-size: 15px;
   line-height: normal;
   font-weight: normal;
   text-align: center;
-  border: none;
+  border: 1px solid #2280a6;
   border-radius: 4px;
-  padding: 8px 9px;
+  padding: 7px 8px;
   cursor: pointer;
   user-select: none;
   text-decoration: none;
@@ -28,21 +28,23 @@ button::-moz-focus-inner {
 }
 .tef-button:hover,
 .tef-button:focus {
-  color: #fff;
-  background-color: #267a9c;
+  color: #ffffff;
+  background-color: #1e7091;
+  border-color: #1e7091;
   outline: none;
 }
 .tef-button:active,
 .tef-button.active {
-  color: #fff;
-  background-color: #398daf;
+  color: #ffffff;
+  background-color: #195f7c;
+  border-color: #195f7c;
 }
 .tef-button [data-icon]:before,
 .tef-button ::content [data-icon]:before {
   position: relative;
   font-size: 24px;
   line-height: 0;
-  top: 5px;
+  top: 3px;
 }
 .tef-button [data-icon] + span,
 .tef-button ::content [data-icon] + span,
@@ -56,7 +58,7 @@ button::-moz-focus-inner {
 }
 .tef-button.small {
   font-size: 11px;
-  padding: 8px;
+  padding: 7px;
 }
 .tef-button.small [data-icon]:before,
 .tef-button.small ::content [data-icon]:before {
@@ -68,7 +70,7 @@ button::-moz-focus-inner {
 }
 .tef-button.large {
   font-size: 24px;
-  padding: 8px 15px;
+  padding: 7px 14px;
 }
 .tef-button.large [data-icon]:before,
 .tef-button.large ::content [data-icon]:before {
@@ -78,45 +80,175 @@ button::-moz-focus-inner {
 .tef-button.large ::content span {
   font-size: 24px;
 }
-.tef-button.positive {
-  background-color: #01b7b4;
+.tef-button .colors-loop.neutral {
+  background-color: #84959e;
+  color: #ffffff;
+  border-color: #84959e;
 }
-.tef-button.positive:hover,
-.tef-button.positive:focus {
-  background-color: #08aca9;
+.tef-button .colors-loop.neutral:hover,
+.tef-button .colors-loop.neutral:focus {
+  background-color: #768993;
+  color: #ffffff;
+  border-color: #768993;
 }
-.tef-button.positive:active {
-  background-color: #1bbebc;
+.tef-button .colors-loop.neutral:active,
+.tef-button .colors-loop.neutral.active {
+  background-color: #697c86;
+  color: #ffffff;
+  border-color: #697c86;
 }
-.tef-button.negative {
-  background-color: #990000;
-}
-.tef-button.negative:hover,
-.tef-button.negative:focus {
-  background-color: #910707;
-}
-.tef-button.negative:active {
-  background-color: #a31a1a;
-}
-.tef-button.subdued {
+.tef-button .colors-loop.significant {
   background-color: #686868;
+  color: #ffffff;
+  border-color: #686868;
 }
-.tef-button.subdued:hover,
-.tef-button.subdued:focus {
-  background-color: #656565;
+.tef-button .colors-loop.significant:hover,
+.tef-button .colors-loop.significant:focus {
+  background-color: #5b5b5b;
+  color: #ffffff;
+  border-color: #5b5b5b;
 }
-.tef-button.subdued:active {
-  background-color: #777777;
+.tef-button .colors-loop.significant:active,
+.tef-button .colors-loop.significant.active {
+  background-color: #4f4f4f;
+  color: #ffffff;
+  border-color: #4f4f4f;
+}
+.tef-button .colors-loop.subdued {
+  background-color: #686868;
+  color: #ffffff;
+  border-color: #686868;
+}
+.tef-button .colors-loop.subdued:hover,
+.tef-button .colors-loop.subdued:focus {
+  background-color: #5b5b5b;
+  color: #ffffff;
+  border-color: #5b5b5b;
+}
+.tef-button .colors-loop.subdued:active,
+.tef-button .colors-loop.subdued.active {
+  background-color: #4f4f4f;
+  color: #ffffff;
+  border-color: #4f4f4f;
+}
+.tef-button .colors-loop.negative {
+  background-color: #990000;
+  color: #ffffff;
+  border-color: #990000;
+}
+.tef-button .colors-loop.negative:hover,
+.tef-button .colors-loop.negative:focus {
+  background-color: #800000;
+  color: #ffffff;
+  border-color: #800000;
+}
+.tef-button .colors-loop.negative:active,
+.tef-button .colors-loop.negative.active {
+  background-color: #660000;
+  color: #ffffff;
+  border-color: #660000;
+}
+.tef-button .colors-loop.positive {
+  background-color: #01b7b4;
+  color: #ffffff;
+  border-color: #01b7b4;
+}
+.tef-button .colors-loop.positive:hover,
+.tef-button .colors-loop.positive:focus {
+  background-color: #019e9b;
+  color: #ffffff;
+  border-color: #019e9b;
+}
+.tef-button .colors-loop.positive:active,
+.tef-button .colors-loop.positive.active {
+  background-color: #018482;
+  color: #ffffff;
+  border-color: #018482;
+}
+.tef-button.neutral {
+  background-color: #84959e;
+  color: #ffffff;
+  border-color: #84959e;
+}
+.tef-button.neutral:hover,
+.tef-button.neutral:focus {
+  background-color: #768993;
+  color: #ffffff;
+  border-color: #768993;
+}
+.tef-button.neutral:active,
+.tef-button.neutral.active {
+  background-color: #697c86;
+  color: #ffffff;
+  border-color: #697c86;
 }
 .tef-button.significant {
   background-color: #686868;
+  color: #ffffff;
+  border-color: #686868;
 }
 .tef-button.significant:hover,
 .tef-button.significant:focus {
-  background-color: #656565;
+  background-color: #5b5b5b;
+  color: #ffffff;
+  border-color: #5b5b5b;
 }
-.tef-button.significant:active {
-  background-color: #777777;
+.tef-button.significant:active,
+.tef-button.significant.active {
+  background-color: #4f4f4f;
+  color: #ffffff;
+  border-color: #4f4f4f;
+}
+.tef-button.subdued {
+  background-color: #686868;
+  color: #ffffff;
+  border-color: #686868;
+}
+.tef-button.subdued:hover,
+.tef-button.subdued:focus {
+  background-color: #5b5b5b;
+  color: #ffffff;
+  border-color: #5b5b5b;
+}
+.tef-button.subdued:active,
+.tef-button.subdued.active {
+  background-color: #4f4f4f;
+  color: #ffffff;
+  border-color: #4f4f4f;
+}
+.tef-button.negative {
+  background-color: #990000;
+  color: #ffffff;
+  border-color: #990000;
+}
+.tef-button.negative:hover,
+.tef-button.negative:focus {
+  background-color: #800000;
+  color: #ffffff;
+  border-color: #800000;
+}
+.tef-button.negative:active,
+.tef-button.negative.active {
+  background-color: #660000;
+  color: #ffffff;
+  border-color: #660000;
+}
+.tef-button.positive {
+  background-color: #01b7b4;
+  color: #ffffff;
+  border-color: #01b7b4;
+}
+.tef-button.positive:hover,
+.tef-button.positive:focus {
+  background-color: #019e9b;
+  color: #ffffff;
+  border-color: #019e9b;
+}
+.tef-button.positive:active,
+.tef-button.positive.active {
+  background-color: #018482;
+  color: #ffffff;
+  border-color: #018482;
 }
 .tef-button[disabled],
 .tef-button.disabled {

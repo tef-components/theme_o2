@@ -3,48 +3,92 @@
 //
 
 // Theme colors
-@color: #2280a6;
-@colorHover: #267a9c;
-@colorActive: #398daf;
-@positive: #01b7b4;
-@positiveHover: #08aca9;
-@positiveActive: #1bbebc;
-@negative: #990000;
-@negativeHover: #910707;
-@negativeActive: #a31a1a;
-@subdued: #686868;
-@subduedHover: #656565;
-@subduedActive: #777777;
-@significant: #686868;
-@significantHover: #656565;
-@significantActive: #777777;
+// Keep 4 spaces before @ in order to do a correct
+// valiable replacement for Web Components
+
+    @color: #2280a6;
+    @text: white;
+    @border: @color;
+    @colorHover: darken(@color,5%);
+    @textHover: @text;
+    @borderHover: @colorHover;
+    @colorActive: darken(@color,10%);
+    @textActive: @text;
+    @borderActive: @colorActive;
+
+    @positive: #01b7b4;
+    @positiveText: @text;
+    @positiveBorder: @positive;
+    @positiveHover: darken(@positive,5%);
+    @positiveTextHover: @positiveText;
+    @positiveBorderHover: @positiveHover;
+    @positiveActive: darken(@positive,10%);
+    @positiveTextActive: @positiveText;
+    @positiveBorderActive: @positiveActive;
+
+    @negative: #990000;
+    @negativeText: @text;
+    @negativeBorder: @negative;
+    @negativeHover: darken(@negative,5%);
+    @negativeTextHover: @negativeText;
+    @negativeBorderHover: @negativeHover;
+    @negativeActive: darken(@negative,10%);
+    @negativeTextActive: @negativeText;
+    @negativeBorderActive: @negativeActive;
+
+    @subdued: #686868;
+    @subduedText: @text;
+    @subduedBorder: @subdued;
+    @subduedHover: darken(@subdued,5%);
+    @subduedTextHover: @subduedText;
+    @subduedBorderHover: @subduedHover;
+    @subduedActive: darken(@subdued,10%);
+    @subduedTextActive: @subduedText;
+    @subduedBorderActive: @subduedActive;
+
+    @significant: #686868;
+    @significantText: @text;
+    @significantBorder: @significant;
+    @significantHover: darken(@significant,5%);
+    @significantTextHover: @significantText;
+    @significantBorderHover: @significantHover;
+    @significantActive: darken(@significant,10%);
+    @significantTextActive: @significantText;
+    @significantBorderActive: @significantActive;
 
 // Common colors
-@neutral: #84959e;
-@neutralHover: #7e8d95;
-@neutralActive: #91a0a8;
-@grey1: #f2f2f2;
-@grey2: #cfcece;
-@grey3: #b3b5b7;
-@grey4: #aeadad;
-@grey5: #686868;
-@grey6: #31313d;
+    @neutral: #84959e;
+    @neutralText: @text;
+    @neutralBorder: @neutral;
+    @neutralHover: darken(@neutral,5%);
+    @neutralTextHover: @neutralText;
+    @neutralBorderHover: @neutralHover;
+    @neutralActive: darken(@neutral,10%);
+    @neutralTextActive: @positiveText;
+    @neutralBorderActive: @neutralActive;
+
+    @grey1: #f2f2f2;
+    @grey2: #cfcece;
+    @grey3: #b3b5b7;
+    @grey4: #aeadad;
+    @grey5: #686868;
+    @grey6: #31313d;
 
 // Breakpoints
-@widthXS: 480px;
-@widthSM: 768px;
-@widthMD: 992px;
-@widthLG: 1200px;
-@widthXL: 1400px;
+    @widthXS: 480px;
+    @widthSM: 768px;
+    @widthMD: 992px;
+    @widthLG: 1200px;
+    @widthXL: 1400px;
 
 // Min and Max widths
-@widthMin: 320px;
+    @widthMin: 320px;
 
-@widthMaxSM: @widthSM - 40px;
-@widthMaxMD: @widthMD - 40px;
-@widthMaxLG: @widthLG - 40px;
-@widthMaxXL: @widthXL - 40px;
+    @widthMaxSM: @widthSM - 40px;
+    @widthMaxMD: @widthMD - 40px;
+    @widthMaxLG: @widthLG - 40px;
+    @widthMaxXL: @widthXL - 40px;
 
 // Grid variables
-@gutter: 1.6%;
-@columnGutter: @gutter / 2;
+    @gutter: 1.6%;
+    @columnGutter: @gutter / 2;
