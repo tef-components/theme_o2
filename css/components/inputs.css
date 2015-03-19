@@ -1,5 +1,4 @@
 label {
-  font-family: "Arial", sans-serif;
   color: #686868;
   display: inline-block;
   vertical-align: middle;
@@ -14,7 +13,6 @@ label {
   display: inline-block;
   vertical-align: middle;
   background: white;
-  font-family: "Arial", sans-serif;
   color: black;
   font-size: 15px;
   line-height: auto;
@@ -119,10 +117,6 @@ label {
 .tef-group label {
   display: block;
 }
-.tef-row > * ~ input,
-.tef-group > * ~ input {
-  margin-left: 6px;
-}
 .tef-row > label + *,
 .tef-group > label + *,
 .tef-row > .tef-message,
@@ -144,10 +138,10 @@ label {
   border-radius: 4px !important;
 }
 .tef-group > * ~ * {
-  margin: 0 0 0 -4px !important;
+  margin: 0 0 0 -5px !important;
 }
 .tef-group .tef-button + .tef-button {
-  margin: 0 0 0 -3px !important;
+  border-left-color: white;
 }
 [disabled],
 .disabled {
