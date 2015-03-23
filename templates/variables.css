@@ -107,31 +107,31 @@ CoreStyle.g.subduedBorderActive =
   "#4f4f4f";
 
 CoreStyle.g.significant =
-  "#686868";
+  "#01b7b4";
 
 CoreStyle.g.significantText =
   "white";
 
 CoreStyle.g.significantBorder =
-  "#686868";
+  "#01b7b4";
 
 CoreStyle.g.significantHover =
-  "#5b5b5b";
+  "#019e9b";
 
 CoreStyle.g.significantTextHover =
   "white";
 
 CoreStyle.g.significantBorderHover =
-  "#5b5b5b";
+  "#019e9b";
 
 CoreStyle.g.significantActive =
-  "#4f4f4f";
+  "#018482";
 
 CoreStyle.g.significantTextActive =
   "white";
 
 CoreStyle.g.significantBorderActive =
-  "#4f4f4f";
+  "#018482";
 
 CoreStyle.g.neutral =
   "#84959e";

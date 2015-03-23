@@ -17,7 +17,6 @@ label.tef-radio.right {
 }
 label.tef-radio.right span {
   padding: 0 35px 0 0;
-  text-align: left;
 }
 label.tef-radio.right span:before {
   left: auto;
@@ -49,7 +48,7 @@ label.tef-radio input {
   cursor: pointer;
 }
 label.tef-radio input:checked ~ span {
-  color: #686868;
+  color: #01b7b4;
 }
 label.tef-radio input:checked ~ span:before {
   display: block;
@@ -63,6 +62,7 @@ label.tef-radio span {
   pointer-events: none;
   padding: 0 20px 0 35px;
   color: #686868;
+  text-align: left;
 }
 label.tef-radio span:before {
   display: none;
@@ -73,7 +73,7 @@ label.tef-radio span:before {
   width: 12px;
   height: 12px;
   margin-top: -7px;
-  background: #686868;
+  background: #01b7b4;
   border-radius: 50%;
 }
 label.tef-radio span:after {

@@ -1172,21 +1172,21 @@ button::-moz-focus-inner {
   border-color: #697c86;
 }
 .tef-button .colors-loop.significant {
-  background-color: #686868;
+  background-color: #01b7b4;
   color: white;
-  border-color: #686868;
+  border-color: #01b7b4;
 }
 .tef-button .colors-loop.significant:hover,
 .tef-button .colors-loop.significant:focus {
-  background-color: #5b5b5b;
+  background-color: #019e9b;
   color: white;
-  border-color: #5b5b5b;
+  border-color: #019e9b;
 }
 .tef-button .colors-loop.significant:active,
 .tef-button .colors-loop.significant.active {
-  background-color: #4f4f4f;
+  background-color: #018482;
   color: white;
-  border-color: #4f4f4f;
+  border-color: #018482;
 }
 .tef-button .colors-loop.subdued {
   background-color: #686868;
@@ -1257,21 +1257,21 @@ button::-moz-focus-inner {
   border-color: #697c86;
 }
 .tef-button.significant {
-  background-color: #686868;
+  background-color: #01b7b4;
   color: white;
-  border-color: #686868;
+  border-color: #01b7b4;
 }
 .tef-button.significant:hover,
 .tef-button.significant:focus {
-  background-color: #5b5b5b;
+  background-color: #019e9b;
   color: white;
-  border-color: #5b5b5b;
+  border-color: #019e9b;
 }
 .tef-button.significant:active,
 .tef-button.significant.active {
-  background-color: #4f4f4f;
+  background-color: #018482;
   color: white;
-  border-color: #4f4f4f;
+  border-color: #018482;
 }
 .tef-button.subdued {
   background-color: #686868;
@@ -1458,7 +1458,7 @@ label {
 .tef-input:focus,
 .tef-input:active {
   padding: 6px 8px;
-  border: 2px solid #686868;
+  border: 2px solid #01b7b4;
   outline: none;
 }
 .tef-input.icon {
@@ -1632,7 +1632,7 @@ label {
 .tef-dropdown:focus span,
 .tef-dropdown:active span {
   padding: 6px 39px 6px 8px;
-  border: 2px solid #686868;
+  border: 2px solid #01b7b4;
   outline: none;
 }
 .tef-dropdown select:-moz-focusring {
@@ -1727,7 +1727,6 @@ label.tef-radio.right {
 }
 label.tef-radio.right span {
   padding: 0 35px 0 0;
-  text-align: left;
 }
 label.tef-radio.right span:before {
   left: auto;
@@ -1759,7 +1758,7 @@ label.tef-radio input {
   cursor: pointer;
 }
 label.tef-radio input:checked ~ span {
-  color: #686868;
+  color: #01b7b4;
 }
 label.tef-radio input:checked ~ span:before {
   display: block;
@@ -1773,6 +1772,7 @@ label.tef-radio span {
   pointer-events: none;
   padding: 0 20px 0 35px;
   color: #686868;
+  text-align: left;
 }
 label.tef-radio span:before {
   display: none;
@@ -1783,7 +1783,7 @@ label.tef-radio span:before {
   width: 12px;
   height: 12px;
   margin-top: -7px;
-  background: #686868;
+  background: #01b7b4;
   border-radius: 50%;
 }
 label.tef-radio span:after {
@@ -1797,4 +1797,157 @@ label.tef-radio span:after {
   margin-top: -13px;
   border: 1px solid #cfcece;
   border-radius: 50%;
+}
+label.tef-checkbox,
+label.tef-switch {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  float: none;
+  background: none;
+  min-width: 0;
+  border: none;
+  margin: 0;
+  padding: 10px 0;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+label.tef-checkbox.right,
+label.tef-switch.right {
+  text-align: right;
+  margin-right: 20px;
+}
+label.tef-checkbox.right span,
+label.tef-switch.right span {
+  padding: 0 35px 0 0;
+}
+label.tef-checkbox.right span:before,
+label.tef-switch.right span:before {
+  left: auto;
+  right: 2px;
+}
+label.tef-checkbox.right span:after,
+label.tef-switch.right span:after {
+  left: auto;
+  right: 0;
+}
+label.tef-checkbox.block,
+label.tef-switch.block {
+  display: block;
+}
+label.tef-checkbox.block.right,
+label.tef-switch.block.right {
+  text-align: left;
+  margin-right: 0;
+}
+label.tef-checkbox.block.right span:after,
+label.tef-switch.block.right span:after {
+  right: 0;
+  left: auto;
+}
+label.tef-checkbox input,
+label.tef-switch input {
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+label.tef-checkbox input:checked ~ span,
+label.tef-switch input:checked ~ span {
+  color: #01b7b4;
+}
+label.tef-checkbox span,
+label.tef-switch span {
+  position: relative;
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: normal;
+  pointer-events: none;
+  padding: 0 20px 0 35px;
+  color: #686868;
+  text-align: left;
+}
+label.tef-checkbox span:before,
+label.tef-switch span:before {
+  position: absolute;
+}
+label.tef-checkbox span:after,
+label.tef-switch span:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  height: 22px;
+  margin-top: -13px;
+}
+label.tef-checkbox span:before {
+  display: none;
+  top: -5px;
+  left: 2px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #01b7b4;
+}
+label.tef-checkbox span:after {
+  width: 22px;
+  font-size: 22px;
+  border: 1px solid #cfcece;
+  border-radius: 4px;
+}
+label.tef-checkbox input:checked ~ span:before {
+  display: block;
+}
+label.tef-switch span {
+  padding: 0 20px 0 55px;
+}
+label.tef-switch span:before {
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background: white;
+  border: 1px solid #cfcece;
+  border-radius: 50%;
+  margin-top: -13px;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all 0.1s ease;
+          transition: all 0.1s ease;
+  z-index: 1;
+}
+label.tef-switch span:after {
+  width: 40px;
+  border: 1px solid #cfcece;
+  background-color: #f2f2f2;
+  border-radius: 15px;
+  -webkit-transition: all 0.1s ease;
+          transition: all 0.1s ease;
+}
+label.tef-switch input:checked ~ span:after {
+  background: rgba(1, 183, 180, 0.6);
+  border-color: #01b7b4;
+}
+label.tef-switch input:checked ~ span:before {
+  -webkit-transform: translateX(18px);
+      -ms-transform: translateX(18px);
+          transform: translateX(18px);
+  border-color: #01b7b4;
+}
+label.tef-switch.right span {
+  padding: 0 55px 0 0;
+}
+label.tef-switch.right span:before {
+  right: 0;
+}
+label.tef-switch.right input:checked ~ span:before {
+  -webkit-transform: translateX(-18px);
+      -ms-transform: translateX(-18px);
+          transform: translateX(-18px);
 }

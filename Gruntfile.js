@@ -174,8 +174,7 @@ module.exports = function(grunt) {
         files: ['../**/less/*.less'],
         tasks: ['less', 'concat'],
         options: {
-          nospawn: true,
-          livereload: true
+          nospawn: true
         }
       }
     }
