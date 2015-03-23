@@ -10,7 +10,9 @@ module.exports = function(grunt) {
           'css/components/buttons.css': 'less/buttons.less',
           'css/components/button-groups.css': 'less/button-groups.less',
           'css/components/dropdowns.css': 'less/dropdowns.less',
-          'css/components/inputs.css': 'less/inputs.less'
+          'css/components/inputs.css': 'less/inputs.less',
+          'css/components/radios.css': 'less/radios.less',
+          'css/components/checkboxes.css': 'less/checkboxes.less'
         }
       }
     },
@@ -45,7 +47,9 @@ module.exports = function(grunt) {
           'css/components/buttons.min.css': 'css/components/buttons.css',
           'css/components/button-groups.min.css': 'css/components/button-groups.css',
           'css/components/dropdowns.min.css': 'css/components/dropdowns.css',
-          'css/components/inputs.min.css': 'css/components/inputs.css'
+          'css/components/inputs.min.css': 'css/components/inputs.css',
+          'css/components/radios.min.css': 'css/components/radios.css',
+          'css/components/checkboxes.min.css': 'css/components/checkboxes.css'
         }
       }
     },
