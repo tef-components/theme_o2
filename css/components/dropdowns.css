@@ -2,12 +2,8 @@
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  max-width: 330px;
   background-color: transparent;
   box-sizing: border-box;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .tef-dropdown:before {
   position: absolute;
@@ -20,12 +16,13 @@
   pointer-events: none;
   text-align: center;
 }
-.tef-dropdown select {
+.tef-dropdown select,
+.tef-dropdown span {
   -webkit-appearance: none;
   -moz-appearance: none;
   display: inline-block;
   vertical-align: middle;
-  max-width: 330px;
+  width: 100%;
   background-image: none;
   background-color: #f2f2f2;
   color: black;
@@ -36,10 +33,25 @@
   padding: 7px 40px 7px 9px;
   border: 1px solid #cfcece;
   cursor: pointer;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .tef-dropdown select:hover,
+.tef-dropdown span:hover,
 .tef-dropdown select:focus,
-.tef-dropdown select:active {
+.tef-dropdown span:focus,
+.tef-dropdown select:active,
+.tef-dropdown span:active {
+  outline: none;
+}
+.tef-dropdown:hover select,
+.tef-dropdown:focus select,
+.tef-dropdown:active select,
+.tef-dropdown:hover span,
+.tef-dropdown:focus span,
+.tef-dropdown:active span {
   padding: 6px 39px 6px 8px;
   border: 2px solid #686868;
   outline: none;
@@ -48,19 +60,64 @@
   color: transparent;
   text-shadow: 0 0 0 black;
 }
+.tef-dropdown ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  list-style: none;
+  margin: 0 5px 8px;
+  padding: 7px 0;
+  background: white;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: -1px 2px 5px rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+.tef-dropdown li {
+  padding: 3px 10px;
+  font-size: 15px;
+  word-break: break-word;
+}
+.tef-dropdown li:hover,
+.tef-dropdown li:focus,
+.tef-dropdown li:active {
+  background: #f2f2f2;
+  cursor: pointer;
+}
+.tef-dropdown a {
+  color: black;
+  text-decoration: none;
+}
+.tef-dropdown span:active + ul,
+.tef-dropdown span.active + ul {
+  display: block;
+}
 .tef-dropdown.small:before {
   font-size: 18px;
   line-height: 28px;
 }
-.tef-dropdown.small select {
+.tef-dropdown.small select,
+.tef-dropdown.small span,
+.tef-dropdown.small li {
   font-size: 11px;
 }
 .tef-dropdown.large:before {
   font-size: 30px;
   line-height: 44px;
 }
-.tef-dropdown.large select {
+.tef-dropdown.large select,
+.tef-dropdown.large span,
+.tef-dropdown.large li {
   font-size: 24px;
+}
+.tef-dropdown.block {
+  width: 100%;
+}
+.tef-dropdown.block select,
+.tef-dropdown.block span {
+  width: 100%;
 }
 @-moz-document url-prefix() {
   .tef-dropdown select {

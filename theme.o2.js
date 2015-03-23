@@ -13,7 +13,7 @@ var setVars = function(){
     "#1e7091";
 
   CoreStyle.g.textHover =
-    "#ffffff";
+    "white";
 
   CoreStyle.g.borderHover =
     "#1e7091";
@@ -22,7 +22,7 @@ var setVars = function(){
     "#195f7c";
 
   CoreStyle.g.textActive =
-    "#ffffff";
+    "white";
 
   CoreStyle.g.borderActive =
     "#195f7c";
@@ -31,7 +31,7 @@ var setVars = function(){
     "#01b7b4";
 
   CoreStyle.g.positiveText =
-    "#ffffff";
+    "white";
 
   CoreStyle.g.positiveBorder =
     "#01b7b4";
@@ -40,7 +40,7 @@ var setVars = function(){
     "#019e9b";
 
   CoreStyle.g.positiveTextHover =
-    "#ffffff";
+    "white";
 
   CoreStyle.g.positiveBorderHover =
     "#019e9b";
@@ -49,7 +49,7 @@ var setVars = function(){
     "#018482";
 
   CoreStyle.g.positiveTextActive =
-    "#ffffff";
+    "white";
 
   CoreStyle.g.positiveBorderActive =
     "#018482";
@@ -58,7 +58,7 @@ var setVars = function(){
     "#990000";
 
   CoreStyle.g.negativeText =
-    "#ffffff";
+    "white";
 
   CoreStyle.g.negativeBorder =
     "#990000";
@@ -67,7 +67,7 @@ var setVars = function(){
     "#800000";
 
   CoreStyle.g.negativeTextHover =
-    "#ffffff";
+    "white";
 
   CoreStyle.g.negativeBorderHover =
     "#800000";
@@ -76,7 +76,7 @@ var setVars = function(){
     "#660000";
 
   CoreStyle.g.negativeTextActive =
-    "#ffffff";
+    "white";
 
   CoreStyle.g.negativeBorderActive =
     "#660000";
@@ -85,7 +85,7 @@ var setVars = function(){
     "#686868";
 
   CoreStyle.g.subduedText =
-    "#ffffff";
+    "white";
 
   CoreStyle.g.subduedBorder =
     "#686868";
@@ -94,7 +94,7 @@ var setVars = function(){
     "#5b5b5b";
 
   CoreStyle.g.subduedTextHover =
-    "#ffffff";
+    "white";
 
   CoreStyle.g.subduedBorderHover =
     "#5b5b5b";
@@ -103,7 +103,7 @@ var setVars = function(){
     "#4f4f4f";
 
   CoreStyle.g.subduedTextActive =
-    "#ffffff";
+    "white";
 
   CoreStyle.g.subduedBorderActive =
     "#4f4f4f";
@@ -112,7 +112,7 @@ var setVars = function(){
     "#686868";
 
   CoreStyle.g.significantText =
-    "#ffffff";
+    "white";
 
   CoreStyle.g.significantBorder =
     "#686868";
@@ -121,7 +121,7 @@ var setVars = function(){
     "#5b5b5b";
 
   CoreStyle.g.significantTextHover =
-    "#ffffff";
+    "white";
 
   CoreStyle.g.significantBorderHover =
     "#5b5b5b";
@@ -130,7 +130,7 @@ var setVars = function(){
     "#4f4f4f";
 
   CoreStyle.g.significantTextActive =
-    "#ffffff";
+    "white";
 
   CoreStyle.g.significantBorderActive =
     "#4f4f4f";
@@ -139,7 +139,7 @@ var setVars = function(){
     "#84959e";
 
   CoreStyle.g.neutralText =
-    "#ffffff";
+    "white";
 
   CoreStyle.g.neutralBorder =
     "#84959e";
@@ -148,7 +148,7 @@ var setVars = function(){
     "#768993";
 
   CoreStyle.g.neutralTextHover =
-    "#ffffff";
+    "white";
 
   CoreStyle.g.neutralBorderHover =
     "#768993";
@@ -157,7 +157,7 @@ var setVars = function(){
     "#697c86";
 
   CoreStyle.g.neutralTextActive =
-    "#ffffff";
+    "white";
 
   CoreStyle.g.neutralBorderActive =
     "#697c86";
