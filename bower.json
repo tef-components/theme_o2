@@ -23,6 +23,11 @@
     "button-groups": "tef-components/button-groups",
     "inputs": "tef-components/inputs",
     "dropdowns": "tef-components/dropdowns",
+    "checkboxes": "tef-components/checkboxes",
+    "radios": "tef-components/radios",
+    "modals": "tef-components/modals",
+    "headers": "tef-components/headers",
+    "utils": "tef-components/utils",
     "grid": "tef-components/grid"
   }
 }

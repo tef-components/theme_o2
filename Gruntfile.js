@@ -12,7 +12,9 @@ module.exports = function(grunt) {
           'css/components/dropdowns.css': 'less/dropdowns.less',
           'css/components/inputs.css': 'less/inputs.less',
           'css/components/radios.css': 'less/radios.less',
-          'css/components/checkboxes.css': 'less/checkboxes.less'
+          'css/components/checkboxes.css': 'less/checkboxes.less',
+          'css/components/modals.css': 'less/modals.less',
+          'css/components/headers.css': 'less/headers.less'
         }
       }
     },
@@ -49,7 +51,9 @@ module.exports = function(grunt) {
           'css/components/dropdowns.min.css': 'css/components/dropdowns.css',
           'css/components/inputs.min.css': 'css/components/inputs.css',
           'css/components/radios.min.css': 'css/components/radios.css',
-          'css/components/checkboxes.min.css': 'css/components/checkboxes.css'
+          'css/components/checkboxes.min.css': 'css/components/checkboxes.css',
+          'css/components/modals.min.css': 'css/components/modals.css',
+          'css/components/headers.min.css': 'css/components/headers.css'
         }
       }
     },
@@ -133,7 +137,7 @@ module.exports = function(grunt) {
     exec: {
       // add new files before commiting
       add: {
-        command: 'git add .'
+        command: 'git add -A'
       },
 
       // push to gh-pages branch

@@ -180,6 +180,18 @@ var setVars = function(){
   CoreStyle.g.grey6 =
     "#31313d";
 
+  CoreStyle.g.headerNav =
+    "#003245";
+
+  CoreStyle.g.headerText =
+    "white";
+
+  CoreStyle.g.headerIcon =
+    "#b6c6cb";
+
+  CoreStyle.g.shadow =
+    "0 2px 6px rgba(0, 0, 0, 0.3)";
+
   CoreStyle.g.widthXS =
     "480px";
 
