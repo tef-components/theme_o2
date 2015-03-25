@@ -2,15 +2,10 @@
 // Theme movistar
 //
 
+@import "../../utils/less/reset.less";
+
 // Global styles
 * { font-family: "Arial", sans-serif; }
-
-// disabled
-[disabled],
-.disabled {
-  opacity: 0.4;
-  pointer-events: none;
-}
 
 // Components
 @import '../../grid/less/grid.less';
@@ -25,3 +20,20 @@
 
 // Variables
 @import 'variables.less';
+
+// Overrides
+.tef-header {
+  background-repeat: repeat-x;
+
+  h2 {
+    width: 54px ;
+    height: 53px;
+    bottom: 33px;
+    left: 32px;
+  }
+
+  h1 {
+    bottom: 30px;
+    a { color: #032b5a; }
+  }
+}

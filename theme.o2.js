@@ -181,13 +181,16 @@ var setVars = function(){
     "#31313d";
 
   CoreStyle.g.headerNav =
-    "#003245";
+    "transparent";
 
   CoreStyle.g.headerText =
     "white";
 
   CoreStyle.g.headerIcon =
-    "#b6c6cb";
+    "#6f9ebc";
+
+  CoreStyle.g.headerReverse =
+    "#032b5a";
 
   CoreStyle.g.shadow =
     "0 2px 6px rgba(0, 0, 0, 0.3)";
@@ -202,10 +205,7 @@ var setVars = function(){
     "992px";
 
   CoreStyle.g.widthLG =
-    "1200px";
-
-  CoreStyle.g.widthXL =
-    "1400px";
+    "1207px";
 
   CoreStyle.g.widthMin =
     "320px";
@@ -217,10 +217,7 @@ var setVars = function(){
     "952px";
 
   CoreStyle.g.widthMaxLG =
-    "1160px";
-
-  CoreStyle.g.widthMaxXL =
-    "1360px";
+    "1167px";
 
   CoreStyle.g.gutter =
     "1.6%";
