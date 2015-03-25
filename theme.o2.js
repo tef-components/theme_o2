@@ -205,18 +205,12 @@ var setVars = function(){
     "992px";
 
   CoreStyle.g.widthLG =
-    "1207px";
+    "1167px";
 
   CoreStyle.g.widthMin =
     "320px";
 
-  CoreStyle.g.widthMaxSM =
-    "728px";
-
-  CoreStyle.g.widthMaxMD =
-    "952px";
-
-  CoreStyle.g.widthMaxLG =
+  CoreStyle.g.widthMax =
     "1167px";
 
   CoreStyle.g.gutter =
