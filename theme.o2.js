@@ -214,10 +214,10 @@ var setVars = function(){
     "1167px";
 
   CoreStyle.g.gutter =
-    "1.6%";
+    "32px";
 
   CoreStyle.g.columnGutter =
-    "0.8%";
+    "16px";
 
 
 }

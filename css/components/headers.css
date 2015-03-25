@@ -10,7 +10,6 @@
   right: 32px;
   color: #fff;
   height: 34px;
-  width: 200px;
   margin: 0;
   font-size: 32px;
   font-weight: 300;
@@ -45,7 +44,7 @@
   color: white;
   z-index: 98;
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 992px) {
   .tef-header nav {
     position: relative;
   }
