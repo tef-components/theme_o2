@@ -173,14 +173,6 @@ body {
 [data-columns]:after {
   clear: both;
 }
-[data-columns]:before,
-[data-columns]:after {
-  content: " ";
-  display: table;
-}
-[data-columns]:after {
-  clear: both;
-}
 [data-columns] > * {
   float: left;
   box-sizing: border-box;
@@ -1362,14 +1354,6 @@ button::-moz-focus-inner {
 .tef-button-group:after {
   clear: both;
 }
-.tef-button-group:before,
-.tef-button-group:after {
-  content: " ";
-  display: table;
-}
-.tef-button-group:after {
-  clear: both;
-}
 .tef-button-group > * {
   float: left;
   margin-left: 1px;
@@ -1860,7 +1844,6 @@ label.tef-switch span:after {
   content: "";
   top: 50%;
   left: 0;
-  height: 22px;
   margin-top: -13px;
 }
 label.tef-checkbox span:before {
@@ -1872,6 +1855,7 @@ label.tef-checkbox span:before {
   color: #01b7b4;
 }
 label.tef-checkbox span:after {
+  height: 22px;
   width: 22px;
   font-size: 22px;
   border: 1px solid #cfcece;
@@ -1881,53 +1865,57 @@ label.tef-checkbox input:checked ~ span:before {
   display: block;
 }
 label.tef-switch span {
-  padding: 0 20px 0 55px;
+  padding: 0 20px 0 77px;
 }
 label.tef-switch span:before {
   content: "";
   top: 50%;
   left: 0;
-  width: 22px;
-  height: 22px;
+  width: 25px;
+  height: 25px;
   background: white;
-  border: 1px solid #cfcece;
   border-radius: 50%;
-  margin-top: -13px;
-  -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
+  margin-top: -12px;
+  -webkit-transform: translateX(1px);
+      -ms-transform: translateX(1px);
+          transform: translateX(1px);
   -webkit-transition: all 0.1s ease;
           transition: all 0.1s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 label.tef-switch span:after {
-  width: 40px;
+  height: 25px;
+  width: 59px;
   border: 1px solid #cfcece;
-  background-color: #f2f2f2;
+  background-color: transparent;
   border-radius: 15px;
   -webkit-transition: all 0.1s ease;
           transition: all 0.1s ease;
 }
 label.tef-switch input:checked ~ span:after {
-  background: rgba(1, 183, 180, 0.6);
+  background: #01b7b4;
   border-color: #01b7b4;
 }
 label.tef-switch input:checked ~ span:before {
-  -webkit-transform: translateX(18px);
-      -ms-transform: translateX(18px);
-          transform: translateX(18px);
+  -webkit-transform: translateX(35px);
+      -ms-transform: translateX(35px);
+          transform: translateX(35px);
   border-color: #01b7b4;
 }
 label.tef-switch.right span {
-  padding: 0 55px 0 0;
+  padding: 0 77px 0 0;
 }
 label.tef-switch.right span:before {
   right: 0;
+  -webkit-transform: translateX(-35px);
+      -ms-transform: translateX(-35px);
+          transform: translateX(-35px);
 }
 label.tef-switch.right input:checked ~ span:before {
-  -webkit-transform: translateX(-18px);
-      -ms-transform: translateX(-18px);
-          transform: translateX(-18px);
+  -webkit-transform: translateX(-1px);
+      -ms-transform: translateX(-1px);
+          transform: translateX(-1px);
 }
 .tef-modal {
   display: none;
