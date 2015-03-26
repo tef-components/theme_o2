@@ -251,3 +251,10 @@ button::-moz-focus-inner {
   color: white;
   border-color: #018482;
 }
+.tef-button.block {
+  display: block;
+  width: 100%;
+}
+.tef-button + .tef-button {
+  margin-left: 6px;
+}

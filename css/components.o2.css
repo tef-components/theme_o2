@@ -119,6 +119,15 @@ button:focus {
   opacity: 0.4;
   pointer-events: none;
 }
+.tef-left {
+  text-align: left;
+}
+.tef-center {
+  text-align: center;
+}
+.tef-right {
+  text-align: right;
+}
 * {
   font-family: "Arial", sans-serif;
 }
@@ -137,6 +146,11 @@ body {
 }
 .tef-content {
   padding: 20px 32px;
+}
+@media only screen and (max-width: 479px) {
+  .tef-content {
+    padding: 20px 16px;
+  }
 }
 [data-columns] {
   display: block;
@@ -1579,6 +1593,13 @@ button::-moz-focus-inner {
   background-color: #018482;
   color: white;
   border-color: #018482;
+}
+.tef-button.block {
+  display: block;
+  width: 100%;
+}
+.tef-button + .tef-button {
+  margin-left: 6px;
 }
 .tef-button-group {
   display: inline-block;
