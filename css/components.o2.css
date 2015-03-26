@@ -145,11 +145,11 @@ body {
   }
 }
 .tef-content {
-  padding: 20px 32px;
+  padding: 20px 16px;
 }
-@media only screen and (max-width: 479px) {
+@media only screen and (min-width: 480px) {
   .tef-content {
-    padding: 20px 16px;
+    padding: 20px 32px;
   }
 }
 [data-columns] {
@@ -2316,7 +2316,7 @@ label.tef-switch.right input:checked ~ span:before {
   color: white;
   z-index: 98;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .tef-header nav {
     position: relative;
   }
@@ -2332,7 +2332,7 @@ label.tef-switch.right input:checked ~ span:before {
   padding: 0;
   margin: 0;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .tef-header ul {
     display: block;
     background: transparent;
@@ -2352,7 +2352,7 @@ label.tef-switch.right input:checked ~ span:before {
   border-bottom: 1px solid #f2f2f2;
   text-align: right;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .tef-header li {
     display: inline-block;
     color: white;
@@ -2369,7 +2369,7 @@ label.tef-switch.right input:checked ~ span:before {
   color: #032b5a;
   text-decoration: none;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .tef-header li a {
     color: white;
   }
@@ -2402,7 +2402,7 @@ label.tef-switch.right input:checked ~ span:before {
 .tef-header .tef-menu.show {
   display: block;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .tef-header .tef-close.show,
   .tef-header .tef-menu.show {
     display: none;
@@ -2424,7 +2424,7 @@ label.tef-switch.right input:checked ~ span:before {
   background: transparent;
   color: white;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .tef-header .tef-menu {
     display: none;
   }
