@@ -14,7 +14,9 @@ module.exports = function(grunt) {
           'css/components/radios.css': 'less/radios.less',
           'css/components/checkboxes.css': 'less/checkboxes.less',
           'css/components/modals.css': 'less/modals.less',
-          'css/components/headers.css': 'less/headers.less'
+          'css/components/headers.css': 'less/headers.less',
+          'css/components/sidebars.css': 'less/sidebars.less',
+          'css/components/tabs.css': 'less/tabs.less'
         }
       }
     },
@@ -53,7 +55,9 @@ module.exports = function(grunt) {
           'css/components/radios.min.css': 'css/components/radios.css',
           'css/components/checkboxes.min.css': 'css/components/checkboxes.css',
           'css/components/modals.min.css': 'css/components/modals.css',
-          'css/components/headers.min.css': 'css/components/headers.css'
+          'css/components/headers.min.css': 'css/components/headers.css',
+          'css/components/sidebars.min.css': 'css/components/sidebars.css',
+          'css/components/tabs.min.css': 'css/components/tabs.css'
         }
       }
     },
