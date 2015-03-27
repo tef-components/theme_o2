@@ -1,5 +1,15 @@
 .tef-sidebar {
+  position: relative;
+  min-height: 1px;
+}
+.tef-sidebar nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   color: #333;
+  background-color: #c5ced3;
 }
 .tef-sidebar header {
   font-size: 10px;
@@ -9,12 +19,13 @@
   padding: 4px 15px;
   background-color: #c5ced3;
 }
-.tef-sidebar > ul {
+.tef-sidebar .tef-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.tef-sidebar > ul li {
+.tef-sidebar .tef-list li {
+  position: relative;
   background-color: #d1d9dd;
   border-bottom: 1px solid #e5eaec;
   font-size: 12px;
@@ -22,17 +33,21 @@
   padding: 12px 15px;
   box-sizing: border-box;
 }
-.tef-sidebar > ul a {
+.tef-sidebar .tef-list a {
   display: block;
   color: #333;
   text-decoration: none;
   margin: -12px -15px;
   padding: 12px 15px;
 }
-.tef-sidebar > ul a:hover,
-.tef-sidebar > ul a:focus,
-.tef-sidebar > ul a:active,
-.tef-sidebar > ul a.active {
+.tef-sidebar .tef-list a:hover,
+.tef-sidebar .tef-list a:focus,
+.tef-sidebar .tef-list a:active,
+.tef-sidebar .tef-list a.active {
   color: #fff;
   background-color: #9ea5a9;
+}
+.tef-sidebar .tef-input.block + [data-icon] {
+  top: 18px;
+  right: 15px;
 }

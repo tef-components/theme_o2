@@ -128,6 +128,41 @@ button:focus {
 .tef-right {
   text-align: right;
 }
+.tef-clear:before,
+.tef-clear:after {
+  content: "";
+  display: table;
+}
+.tef-clear:after {
+  clear: both;
+}
+.tef-clear:before,
+.tef-clear:after {
+  content: " ";
+  display: table;
+}
+.tef-clear:after {
+  clear: both;
+}
+.tef-clear:before,
+.tef-clear:after {
+  content: " ";
+  display: table;
+}
+.tef-clear:after {
+  clear: both;
+}
+.tef-clear:before,
+.tef-clear:after {
+  content: " ";
+  display: table;
+}
+.tef-clear:after {
+  clear: both;
+}
+.tef-relative {
+  position: relative;
+}
 * {
   font-family: "Arial", sans-serif;
 }
@@ -145,6 +180,7 @@ body {
   }
 }
 .tef-content {
+  box-sizing: border-box;
   padding: 20px 16px;
 }
 @media only screen and (min-width: 480px) {
@@ -160,7 +196,7 @@ body {
 }
 [data-columns]:before,
 [data-columns]:after {
-  content: " ";
+  content: "";
   display: table;
 }
 [data-columns]:after {
@@ -1610,7 +1646,7 @@ button::-moz-focus-inner {
 }
 .tef-button-group:before,
 .tef-button-group:after {
-  content: " ";
+  content: "";
   display: table;
 }
 .tef-button-group:after {
@@ -2441,7 +2477,17 @@ label.tef-switch.right input:checked ~ span:before {
   }
 }
 .tef-sidebar {
+  position: relative;
+  min-height: 1px;
+}
+.tef-sidebar nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   color: #333;
+  background-color: #c5ced3;
 }
 .tef-sidebar header {
   font-size: 10px;
@@ -2451,12 +2497,13 @@ label.tef-switch.right input:checked ~ span:before {
   padding: 4px 15px;
   background-color: #c5ced3;
 }
-.tef-sidebar > ul {
+.tef-sidebar .tef-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.tef-sidebar > ul li {
+.tef-sidebar .tef-list li {
+  position: relative;
   background-color: #d1d9dd;
   border-bottom: 1px solid #e5eaec;
   font-size: 12px;
@@ -2464,19 +2511,121 @@ label.tef-switch.right input:checked ~ span:before {
   padding: 12px 15px;
   box-sizing: border-box;
 }
-.tef-sidebar > ul a {
+.tef-sidebar .tef-list a {
   display: block;
   color: #333;
   text-decoration: none;
   margin: -12px -15px;
   padding: 12px 15px;
 }
-.tef-sidebar > ul a:hover,
-.tef-sidebar > ul a:focus,
-.tef-sidebar > ul a:active,
-.tef-sidebar > ul a.active {
+.tef-sidebar .tef-list a:hover,
+.tef-sidebar .tef-list a:focus,
+.tef-sidebar .tef-list a:active,
+.tef-sidebar .tef-list a.active {
   color: #fff;
   background-color: #9ea5a9;
+}
+.tef-sidebar .tef-input.block + [data-icon] {
+  top: 18px;
+  right: 15px;
+}
+.tef-tabs {
+  height: 50px;
+  background-color: #d1d9dd;
+  border-bottom: 1px solid #e5eaec;
+  box-sizing: border-box;
+}
+.tef-tabs li {
+  height: 40px;
+  color: #84959e;
+  background-color: #beccd4;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+  padding: 0 10px;
+  border-bottom: 1px solid #b7c1c6;
+  border-right: 1px solid #b7c1c6;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tef-tabs li:hover,
+.tef-tabs li:focus,
+.tef-tabs li:active {
+  color: #364145;
+}
+.tef-tabs li.active {
+  color: #364145;
+  background-color: #d1d9dd;
+  border-bottom-color: #d1d9dd;
+}
+.tef-tabs li [data-icon] {
+  font-size: 24px;
+  padding: 0 10px;
+}
+.tef-toolbar {
+  background-color: #beccd4;
+  border-top: 1px solid #e5eaec;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.tef-toolbar:before,
+.tef-toolbar:after {
+  content: "";
+  display: table;
+}
+.tef-toolbar:after {
+  clear: both;
+}
+.tef-toolbar:before,
+.tef-toolbar:after {
+  content: " ";
+  display: table;
+}
+.tef-toolbar:after {
+  clear: both;
+}
+.tef-toolbar:before,
+.tef-toolbar:after {
+  content: " ";
+  display: table;
+}
+.tef-toolbar:after {
+  clear: both;
+}
+.tef-toolbar:before,
+.tef-toolbar:after {
+  content: " ";
+  display: table;
+}
+.tef-toolbar:after {
+  clear: both;
+}
+.tef-toolbar li {
+  float: left;
+  height: 40px;
+  min-width: 28px;
+  color: #364145;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 5px;
+  border-right: 1px solid #e5eaec;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tef-toolbar li:hover,
+.tef-toolbar li:focus,
+.tef-toolbar li:active {
+  background-color: #d1d9dd;
+}
+.tef-toolbar li [data-icon] {
+  font-size: 24px;
 }
 .tef-header {
   background-repeat: repeat-x;

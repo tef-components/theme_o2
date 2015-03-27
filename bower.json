@@ -28,6 +28,9 @@
     "modals": "tef-components/modals",
     "headers": "tef-components/headers",
     "utils": "tef-components/utils",
-    "grid": "tef-components/grid"
+    "grid": "tef-components/grid",
+    "sidebars": "tef-components/sidebars",
+    "tabs": "tef-components/tabs",
+    "toolbars": "tef-components/toolbars"
   }
 }
