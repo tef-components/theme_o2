@@ -21,15 +21,53 @@
           </ul>
         </nav>
         <h1><a href="/">TEF Components</a></h1>
-        <h2>O2</h2>
+        <h2>Telefonica</h2>
       </header>
 
-      <section class="tef-content">
-        <h2>Forms</h1>
-        <p>This page shows basic form elements.</p>
-
-        <div>
-          <div data-columns="2" data-columns-sm="1" class="tef-gutter">
+      <div data-columns="4" data-columns-md="3" data-columns-sm="1" class="tef-relative">
+        <nav class="tef-sidebar" data-columns-sm="0">
+          <ul class="tef-tabs" data-columns="3">
+            <li><i data-icon="user"></i></li>
+            <li class="active"><i data-icon="search"></i></li>
+            <li><i data-icon="help_circle"></i></li>
+          </ul>
+          <ul class="tef-toolbar">
+            <li><i data-icon="user"></i></li>
+            <li>Edit</li>
+            <li class="active"><i data-icon="search"></i></li>
+            <li><i data-icon="help_circle"></i></li>
+          </ul>
+          <div class="tef-list">
+            <ul>
+              <li>
+                <input type="text" class="tef-input icon small block">
+                <i data-icon="search"></i>
+              </li>
+            </ul>
+            <header>Group 1</header>
+            <ul>
+              <li><a href="">List item 1</a></li>
+              <li><a href="">List item 2</a></li>
+              <li><a href="">List item 3</a></li>
+              <li><a href="">List item 4</a></li>
+              <li><a href="">List item 5</a></li>
+              <li><a href="">List item 6</a></li>
+            </ul>
+            <header>Group 2</header>
+            <ul>
+              <li><a href="">List item 1</a></li>
+              <li><a href="">List item 2</a></li>
+              <li><a href="">List item 3</a></li>
+              <li><a href="">List item 4</a></li>
+              <li><a href="">List item 5</a></li>
+              <li><a href="">List item 6</a></li>
+            </ul>
+          </div>
+        </nav>
+        <section class="tef-content" data-column-offset="1" data-column-offset-md="1" data-column-offset-sm="0" data-column-span="3" data-column-span-md="2" data-column-span-sm="1">
+          <h2>Forms</h1>
+          <p>This page shows basic form elements.</p>
+          <article data-columns="2" data-columns-sm="1" class="tef-gutter">
             <div class="tef-row">
               <label>Consectetuer</label>
               <input type="text" class="tef-input block">
@@ -38,12 +76,12 @@
               <label>Adipiscing elit</label>
               <input type="text" class="tef-input block">
             </div>
-          </div>
-          <div class="tef-row">
+          </article>
+          <article class="tef-row">
             <label>Sed diam nonummy</label>
             <input type="text" class="tef-input block">
-          </div>
-          <div data-columns="4" data-columns-sm="2" data-columns-xs="1" class="tef-gutter">
+          </article>
+          <article data-columns="4" data-columns-sm="2" data-columns-xs="1" class="tef-gutter">
             <div class="tef-row" data-column-span="2" data-column-span-sm="2" data-column-span-xs="1">
               <label>Nibh euismod</label>
               <input type="text" class="tef-input block">
@@ -63,13 +101,13 @@
               <label>Laoreet</label>
               <input type="text" class="tef-input block">
             </div>
-          </div>
-          <div class="tef-row">
+          </article>
+          <article class="tef-row">
             <label>Magna aliquam</label>
             <textarea class="tef-input block"></textarea>
-          </div>
+          </article>
           <br>
-          <div class="tef-row">
+          <article class="tef-row">
             <p>Lorem ipsum</p>
             <label class="tef-radio">
               <input type="radio" name="radio1" checked>
@@ -83,9 +121,9 @@
               <input type="radio" name="radio1">
               <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat </span>
             </label>
-          </div>
+          </article>
           <br>
-          <div class="tef-row">
+          <article class="tef-row">
             <p>Laoreet dolore</p>
             <label class="tef-checkbox">
               <input type="checkbox" checked>
@@ -99,7 +137,7 @@
               <input type="checkbox">
               <span data-icon="check">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat </span>
             </label>
-          </div>
+          </article>
           <br>
           <div class="tef-row">
             <p>Euismod tincidunt</p>
@@ -113,8 +151,8 @@
             <button class="tef-button subdued">Cancel</button>
             <button class="tef-button positive">Submit</button>
           </footer>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
 
     <script>

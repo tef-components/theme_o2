@@ -1,11 +1,6 @@
 .tef-sidebar {
-  position: relative;
-  min-height: 1px;
-}
-.tef-sidebar nav {
   position: absolute;
   top: 0;
-  right: 0;
   bottom: 0;
   left: 0;
   color: #333;
@@ -20,6 +15,14 @@
   background-color: #c5ced3;
 }
 .tef-sidebar .tef-list {
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.tef-sidebar .tef-list ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -47,7 +50,23 @@
   color: #fff;
   background-color: #9ea5a9;
 }
+.tef-sidebar .tef-tabs ~ .tef-list {
+  top: 50px;
+}
+.tef-sidebar .tef-tabs ~ .tef-list {
+  bottom: 40px;
+}
 .tef-sidebar .tef-input.block + [data-icon] {
   top: 18px;
   right: 15px;
+}
+.tef-sidebar .tef-toolbar {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+[data-columns] > .tef-sidebar {
+  float: none;
 }
