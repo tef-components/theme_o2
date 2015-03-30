@@ -31,6 +31,8 @@
     "grid": "tef-components/grid",
     "sidebars": "tef-components/sidebars",
     "tabs": "tef-components/tabs",
-    "toolbars": "tef-components/toolbars"
+    "toolbars": "tef-components/toolbars",
+    "tables": "tef-components/tables",
+    "tooltips": "tef-components/tooltips"
   }
 }
