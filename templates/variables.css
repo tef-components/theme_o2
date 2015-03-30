@@ -133,33 +133,6 @@ CoreStyle.g.significantTextActive =
 CoreStyle.g.significantBorderActive =
   "#018482";
 
-CoreStyle.g.neutral =
-  "#84959e";
-
-CoreStyle.g.neutralText =
-  "white";
-
-CoreStyle.g.neutralBorder =
-  "#84959e";
-
-CoreStyle.g.neutralHover =
-  "#768993";
-
-CoreStyle.g.neutralTextHover =
-  "white";
-
-CoreStyle.g.neutralBorderHover =
-  "#768993";
-
-CoreStyle.g.neutralActive =
-  "#697c86";
-
-CoreStyle.g.neutralTextActive =
-  "white";
-
-CoreStyle.g.neutralBorderActive =
-  "#697c86";
-
 CoreStyle.g.grey1 =
   "#f2f2f2";
 

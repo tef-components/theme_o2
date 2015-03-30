@@ -30,7 +30,7 @@
   line-height: normal;
   font-weight: normal;
   border-radius: 4px;
-  padding: 7px 40px 7px 9px;
+  padding: 8px 40px 8px 9px;
   border: 1px solid #cfcece;
   cursor: pointer;
   box-sizing: border-box;
@@ -52,7 +52,7 @@
 .tef-dropdown:hover span,
 .tef-dropdown:focus span,
 .tef-dropdown:active span {
-  padding: 6px 39px 6px 8px;
+  padding: 7px 39px 7px 8px;
   border: 2px solid #01b7b4;
   outline: none;
 }
@@ -95,7 +95,18 @@
   line-height: 28px;
 }
 .tef-dropdown.small select,
-.tef-dropdown.small span,
+.tef-dropdown.small span {
+  font-size: 11px;
+  padding: 6px 40px 6px 9px;
+}
+.tef-dropdown.small:hover select,
+.tef-dropdown.small:focus select,
+.tef-dropdown.small:active select,
+.tef-dropdown.small:hover span,
+.tef-dropdown.small:focus span,
+.tef-dropdown.small:active span {
+  padding: 5px 39px 5px 8px;
+}
 .tef-dropdown.small li {
   font-size: 11px;
 }
@@ -104,7 +115,18 @@
   line-height: 44px;
 }
 .tef-dropdown.large select,
-.tef-dropdown.large span,
+.tef-dropdown.large span {
+  font-size: 24px;
+  padding: 7px 40px 7px 14px;
+}
+.tef-dropdown.large:hover select,
+.tef-dropdown.large:focus select,
+.tef-dropdown.large:active select,
+.tef-dropdown.large:hover span,
+.tef-dropdown.large:focus span,
+.tef-dropdown.large:active span {
+  padding: 6px 39px 6px 13px;
+}
 .tef-dropdown.large li {
   font-size: 24px;
 }
@@ -131,12 +153,4 @@
   margin: 8px 4px 0;
 }
 @-moz-document url-prefix() {
-  .tef-dropdown select {
-    padding: 6px 40px 6px 9px;
-  }
-  .tef-dropdown select:hover,
-  .tef-dropdown select:focus,
-  .tef-dropdown select:active {
-    padding: 5px 39px 5px 8px;
-  }
 }

@@ -75,6 +75,7 @@ label.tef-switch span {
 label.tef-checkbox span:before,
 label.tef-switch span:before {
   position: absolute;
+  top: 50%;
 }
 label.tef-checkbox span:after,
 label.tef-switch span:after {
@@ -86,11 +87,11 @@ label.tef-switch span:after {
 }
 label.tef-checkbox span:before {
   display: none;
-  top: -5px;
   left: 2px;
   font-size: 20px;
   line-height: 24px;
   color: #01b7b4;
+  margin-top: -13px;
 }
 label.tef-checkbox span:after {
   height: 22px;
@@ -107,7 +108,6 @@ label.tef-switch span {
 }
 label.tef-switch span:before {
   content: "";
-  top: 50%;
   left: 0;
   width: 25px;
   height: 25px;

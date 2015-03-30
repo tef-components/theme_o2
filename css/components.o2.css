@@ -151,6 +151,15 @@ button:focus {
 .tef-relative {
   position: relative;
 }
+.tef-absolute {
+  position: absolute;
+}
+.tef-inline {
+  display: inline-block;
+}
+.tef-block {
+  display: block;
+}
 * {
   font-family: "Arial", sans-serif;
 }
@@ -185,14 +194,6 @@ body {
 [data-columns]:before,
 [data-columns]:after {
   content: "";
-  display: table;
-}
-[data-columns]:after {
-  clear: both;
-}
-[data-columns]:before,
-[data-columns]:after {
-  content: " ";
   display: table;
 }
 [data-columns]:after {
@@ -2280,7 +2281,7 @@ button::-moz-focus-inner {
   text-align: center;
   border: 1px solid #2280a6;
   border-radius: 4px;
-  padding: 7px 8px;
+  padding: 8px 9px;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -2290,6 +2291,7 @@ button::-moz-focus-inner {
   -ms-touch-action: manipulation;
       touch-action: manipulation;
   box-sizing: border-box;
+  text-transform: none;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2326,7 +2328,7 @@ button::-moz-focus-inner {
 }
 .tef-button.small {
   font-size: 11px;
-  padding: 7px;
+  padding: 6px 9px;
 }
 .tef-button.small [data-icon]:before,
 .tef-button.small ::content [data-icon]:before {
@@ -2349,23 +2351,6 @@ button::-moz-focus-inner {
 .tef-button.large span,
 .tef-button.large ::content span {
   font-size: 24px;
-}
-.tef-button .colors-loop.neutral {
-  background-color: #84959e;
-  color: white;
-  border-color: #84959e;
-}
-.tef-button .colors-loop.neutral:hover,
-.tef-button .colors-loop.neutral:focus {
-  background-color: #768993;
-  color: white;
-  border-color: #768993;
-}
-.tef-button .colors-loop.neutral:active,
-.tef-button .colors-loop.neutral.active {
-  background-color: #697c86;
-  color: white;
-  border-color: #697c86;
 }
 .tef-button .colors-loop.significant {
   background-color: #01b7b4;
@@ -2434,23 +2419,6 @@ button::-moz-focus-inner {
   background-color: #018482;
   color: white;
   border-color: #018482;
-}
-.tef-button.neutral {
-  background-color: #84959e;
-  color: white;
-  border-color: #84959e;
-}
-.tef-button.neutral:hover,
-.tef-button.neutral:focus {
-  background-color: #768993;
-  color: white;
-  border-color: #768993;
-}
-.tef-button.neutral:active,
-.tef-button.neutral.active {
-  background-color: #697c86;
-  color: white;
-  border-color: #697c86;
 }
 .tef-button.significant {
   background-color: #01b7b4;
@@ -2558,14 +2526,6 @@ button::-moz-focus-inner {
 .tef-button-group:after {
   clear: both;
 }
-.tef-button-group:before,
-.tef-button-group:after {
-  content: " ";
-  display: table;
-}
-.tef-button-group:after {
-  clear: both;
-}
 .tef-button-group > * {
   float: left;
   margin-left: 1px;
@@ -2614,7 +2574,7 @@ label {
   background: white;
   color: black;
   font-size: 15px;
-  padding: 7px 9px;
+  padding: 8px 9px;
   border: 1px solid #cfcece;
   border-radius: 4px;
   box-sizing: border-box;
@@ -2624,16 +2584,28 @@ label {
 }
 .tef-input.small {
   font-size: 11px;
+  padding: 6px 9px;
 }
 .tef-input.large {
   font-size: 24px;
+  padding: 7px 14px;
 }
 .tef-input:hover,
 .tef-input:focus,
 .tef-input:active {
-  padding: 6px 8px;
+  padding: 7px 8px;
   border: 2px solid #01b7b4;
   outline: none;
+}
+.tef-input:hover.small,
+.tef-input:focus.small,
+.tef-input:active.small {
+  padding: 5px 8px;
+}
+.tef-input:hover.large,
+.tef-input:focus.large,
+.tef-input:active.large {
+  padding: 6px 13px;
 }
 .tef-input.icon {
   padding-right: 40px;
@@ -2648,6 +2620,7 @@ label {
   top: 3px;
   left: -37px;
   width: 40px;
+  margin-right: -27px;
 }
 .tef-input.icon + [data-icon]:before {
   font-size: 24px;
@@ -2655,6 +2628,7 @@ label {
 .tef-input.icon.small + [data-icon] {
   top: 2px;
   left: -32px;
+  margin-right: -22px;
 }
 .tef-input.icon.small + [data-icon]:before {
   font-size: 18px;
@@ -2662,6 +2636,7 @@ label {
 .tef-input.icon.large + [data-icon] {
   top: 6px;
   left: -40px;
+  margin-right: -30px;
 }
 .tef-input.icon.large + [data-icon]:before {
   font-size: 30px;
@@ -2675,36 +2650,46 @@ label {
   position: absolute;
   right: 0;
   left: auto;
+  margin-right: 0;
 }
 .tef-message {
   display: inline-block;
   vertical-align: middle;
   color: white;
-  padding: 8px 10px;
+  font-size: 12px;
+  padding: 6px 10px;
   border-radius: 4px;
   box-sizing: border-box;
 }
 .tef-ok input {
-  padding: 6px 8px;
+  padding: 7px 8px;
   border: 2px solid #01b7b4;
+}
+.tef-ok input.small {
+  padding: 5px 8px;
+}
+.tef-ok input.large {
+  padding: 6px 13px;
 }
 .tef-ok .tef-message {
   background-color: #01b7b4;
 }
 .tef-warning input,
-.tef-negative input {
-  padding: 6px 8px;
+.tef-error input {
+  padding: 7px 8px;
   border: 2px solid #990000;
 }
+.tef-warning input.small,
+.tef-error input.small {
+  padding: 5px 8px;
+}
+.tef-warning input.large,
+.tef-error input.large {
+  padding: 6px 13px;
+}
 .tef-warning .tef-message,
-.tef-negative .tef-message {
+.tef-error .tef-message {
   background-color: #990000;
-}
-.tef-input.small + .tef-message {
-  font-size: 11px;
-}
-.tef-input.large + .tef-message {
-  font-size: 24px;
 }
 .tef-input.block + .tef-message {
   margin-top: 5px;
@@ -2720,31 +2705,50 @@ label {
 .tef-group label {
   display: block;
 }
+.tef-row label.tef-inline,
+.tef-group label.tef-inline {
+  display: inline-block;
+}
 .tef-row > label + *,
 .tef-group > label + *,
 .tef-row > .tef-message,
 .tef-group > .tef-message {
   margin-left: 0;
 }
-.tef-group > * {
+.tef-group > *,
+.tef-group ::content > * {
   border-radius: 0 !important;
 }
 .tef-group > *:first-child,
-.tef-group > *:first-child > button {
+.tef-group ::content > *:first-child,
+.tef-group > *:first-child > button,
+.tef-group ::content > *:first-child > button,
+.tef-group > *:first-child::shadow .tef-button,
+.tef-group ::content > *:first-child::shadow .tef-button {
   border-radius: 4px 0 0 4px !important;
 }
 .tef-group > *:last-child,
-.tef-group > *:last-child > button {
+.tef-group ::content > *:last-child,
+.tef-group > *:last-child > button,
+.tef-group ::content > *:last-child > button,
+.tef-group > *:last-child::shadow .tef-button,
+.tef-group ::content > *:last-child::shadow .tef-button {
   border-radius: 0 4px 4px 0 !important;
 }
-.tef-group > *:first-child:last-child {
+.tef-group > *:first-child:last-child,
+.tef-group ::content > *:first-child:last-child {
   border-radius: 4px !important;
 }
-.tef-group > * ~ * {
+.tef-group > * ~ *,
+.tef-group ::content > * ~ * {
   margin: 0 0 0 -5px !important;
 }
-.tef-group .tef-button + .tef-button {
+.tef-group .tef-button + .tef-button,
+.tef-group ::content tef-button + tef-button::shadow .tef-button {
   border-left-color: white;
+}
+textarea.tef-input {
+  resize: none;
 }
 [disabled],
 .disabled {
@@ -2783,7 +2787,7 @@ label {
   line-height: normal;
   font-weight: normal;
   border-radius: 4px;
-  padding: 7px 40px 7px 9px;
+  padding: 8px 40px 8px 9px;
   border: 1px solid #cfcece;
   cursor: pointer;
   box-sizing: border-box;
@@ -2805,7 +2809,7 @@ label {
 .tef-dropdown:hover span,
 .tef-dropdown:focus span,
 .tef-dropdown:active span {
-  padding: 6px 39px 6px 8px;
+  padding: 7px 39px 7px 8px;
   border: 2px solid #01b7b4;
   outline: none;
 }
@@ -2848,7 +2852,18 @@ label {
   line-height: 28px;
 }
 .tef-dropdown.small select,
-.tef-dropdown.small span,
+.tef-dropdown.small span {
+  font-size: 11px;
+  padding: 6px 40px 6px 9px;
+}
+.tef-dropdown.small:hover select,
+.tef-dropdown.small:focus select,
+.tef-dropdown.small:active select,
+.tef-dropdown.small:hover span,
+.tef-dropdown.small:focus span,
+.tef-dropdown.small:active span {
+  padding: 5px 39px 5px 8px;
+}
 .tef-dropdown.small li {
   font-size: 11px;
 }
@@ -2857,7 +2872,18 @@ label {
   line-height: 44px;
 }
 .tef-dropdown.large select,
-.tef-dropdown.large span,
+.tef-dropdown.large span {
+  font-size: 24px;
+  padding: 7px 40px 7px 14px;
+}
+.tef-dropdown.large:hover select,
+.tef-dropdown.large:focus select,
+.tef-dropdown.large:active select,
+.tef-dropdown.large:hover span,
+.tef-dropdown.large:focus span,
+.tef-dropdown.large:active span {
+  padding: 6px 39px 6px 13px;
+}
 .tef-dropdown.large li {
   font-size: 24px;
 }
@@ -2884,14 +2910,6 @@ label {
   margin: 8px 4px 0;
 }
 @-moz-document url-prefix() {
-  .tef-dropdown select {
-    padding: 6px 40px 6px 9px;
-  }
-  .tef-dropdown select:hover,
-  .tef-dropdown select:focus,
-  .tef-dropdown select:active {
-    padding: 5px 39px 5px 8px;
-  }
 }
 label.tef-radio {
   display: inline-block;
@@ -3060,6 +3078,7 @@ label.tef-switch span {
 label.tef-checkbox span:before,
 label.tef-switch span:before {
   position: absolute;
+  top: 50%;
 }
 label.tef-checkbox span:after,
 label.tef-switch span:after {
@@ -3071,11 +3090,11 @@ label.tef-switch span:after {
 }
 label.tef-checkbox span:before {
   display: none;
-  top: -5px;
   left: 2px;
   font-size: 20px;
   line-height: 24px;
   color: #01b7b4;
+  margin-top: -13px;
 }
 label.tef-checkbox span:after {
   height: 22px;
@@ -3092,7 +3111,6 @@ label.tef-switch span {
 }
 label.tef-switch span:before {
   content: "";
-  top: 50%;
   left: 0;
   width: 25px;
   height: 25px;
@@ -3367,12 +3385,15 @@ label.tef-switch.right input:checked ~ span:before {
   }
 }
 .tef-sidebar {
+  position: relative;
+  color: #333;
+  background-color: #c5ced3;
+}
+.tef-sidebar.absolute {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
-  color: #333;
-  background-color: #c5ced3;
 }
 .tef-sidebar header {
   font-size: 10px;
@@ -3434,9 +3455,25 @@ label.tef-switch.right input:checked ~ span:before {
   bottom: 0;
   left: 0;
   z-index: 1;
+  background-color: #beccd4;
+  border-top: 1px solid #e5eaec;
+  color: #364145;
+  padding: 0;
 }
-[data-columns] > .tef-sidebar {
-  float: none;
+.tef-sidebar .tef-toolbar li {
+  padding: 0 5px;
+  border-color: #e5eaec;
+}
+.tef-sidebar .tef-toolbar li:first-child {
+  border-left: none;
+}
+.tef-sidebar .tef-toolbar a {
+  color: #364145;
+}
+.tef-sidebar .tef-toolbar a:hover,
+.tef-sidebar .tef-toolbar a:focus,
+.tef-sidebar .tef-toolbar a:active {
+  background-color: #d1d9dd;
 }
 .tef-tabs {
   height: 50px;
@@ -3474,11 +3511,10 @@ label.tef-switch.right input:checked ~ span:before {
   padding: 0 10px;
 }
 .tef-toolbar {
-  background-color: #beccd4;
-  border-top: 1px solid #e5eaec;
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 0 20px;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 .tef-toolbar:before,
 .tef-toolbar:after {
@@ -3504,37 +3540,90 @@ label.tef-switch.right input:checked ~ span:before {
 .tef-toolbar:after {
   clear: both;
 }
-.tef-toolbar:before,
-.tef-toolbar:after {
+.tef-toolbar ul {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.tef-toolbar ul:before,
+.tef-toolbar ul:after {
+  content: "";
+  display: table;
+}
+.tef-toolbar ul:after {
+  clear: both;
+}
+.tef-toolbar ul:before,
+.tef-toolbar ul:after {
   content: " ";
   display: table;
 }
-.tef-toolbar:after {
+.tef-toolbar ul:after {
   clear: both;
+}
+.tef-toolbar ul:before,
+.tef-toolbar ul:after {
+  content: " ";
+  display: table;
+}
+.tef-toolbar ul:after {
+  clear: both;
+}
+.tef-toolbar ul.right {
+  float: right;
 }
 .tef-toolbar li {
   float: left;
   height: 40px;
   min-width: 28px;
-  color: #364145;
   line-height: 40px;
   font-size: 14px;
   text-align: center;
   text-transform: uppercase;
-  padding: 0 5px;
-  border-right: 1px solid #e5eaec;
-  cursor: pointer;
+  padding: 0 15px;
+  border-right: 1px solid #ccc;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.tef-toolbar li:hover,
-.tef-toolbar li:focus,
-.tef-toolbar li:active {
-  background-color: #d1d9dd;
+.tef-toolbar li:first-child {
+  border-left: 1px solid #ccc;
+}
+.tef-toolbar li:first-child:last-child {
+  border: none;
+  padding: 0;
 }
 .tef-toolbar li [data-icon] {
   font-size: 24px;
+}
+.tef-toolbar a {
+  display: block;
+  margin: 0 -15px;
+  color: #333;
+  text-decoration: none;
+}
+.tef-toolbar a:hover,
+.tef-toolbar a:focus,
+.tef-toolbar a:active {
+  background-color: #d1d9dd;
+}
+.tef-toolbar.dark {
+  background-color: #30303c;
+  color: white;
+}
+.tef-toolbar.dark li {
+  border-color: #808080;
+}
+.tef-toolbar.dark li:first-child {
+  border-color: #808080;
+}
+.tef-toolbar.dark a {
+  color: #888;
+}
+.tef-toolbar.dark a:hover,
+.tef-toolbar.dark a:focus,
+.tef-toolbar.dark a:active {
+  background-color: #27282f;
 }
 .tef-table {
   width: 100%;

@@ -1,9 +1,8 @@
 .tef-toolbar {
-  background-color: #beccd4;
-  border-top: 1px solid #e5eaec;
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 0 20px;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 .tef-toolbar:before,
 .tef-toolbar:after {
@@ -13,27 +12,72 @@
 .tef-toolbar:after {
   clear: both;
 }
+.tef-toolbar ul {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.tef-toolbar ul:before,
+.tef-toolbar ul:after {
+  content: "";
+  display: table;
+}
+.tef-toolbar ul:after {
+  clear: both;
+}
+.tef-toolbar ul.right {
+  float: right;
+}
 .tef-toolbar li {
   float: left;
   height: 40px;
   min-width: 28px;
-  color: #364145;
   line-height: 40px;
   font-size: 14px;
   text-align: center;
   text-transform: uppercase;
-  padding: 0 5px;
-  border-right: 1px solid #e5eaec;
-  cursor: pointer;
+  padding: 0 15px;
+  border-right: 1px solid #ccc;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.tef-toolbar li:hover,
-.tef-toolbar li:focus,
-.tef-toolbar li:active {
-  background-color: #d1d9dd;
+.tef-toolbar li:first-child {
+  border-left: 1px solid #ccc;
+}
+.tef-toolbar li:first-child:last-child {
+  border: none;
+  padding: 0;
 }
 .tef-toolbar li [data-icon] {
   font-size: 24px;
+}
+.tef-toolbar a {
+  display: block;
+  margin: 0 -15px;
+  color: #333;
+  text-decoration: none;
+}
+.tef-toolbar a:hover,
+.tef-toolbar a:focus,
+.tef-toolbar a:active {
+  background-color: #d1d9dd;
+}
+.tef-toolbar.dark {
+  background-color: #30303c;
+  color: white;
+}
+.tef-toolbar.dark li {
+  border-color: #808080;
+}
+.tef-toolbar.dark li:first-child {
+  border-color: #808080;
+}
+.tef-toolbar.dark a {
+  color: #888;
+}
+.tef-toolbar.dark a:hover,
+.tef-toolbar.dark a:focus,
+.tef-toolbar.dark a:active {
+  background-color: #27282f;
 }

@@ -13,7 +13,7 @@ label {
   background: white;
   color: black;
   font-size: 15px;
-  padding: 7px 9px;
+  padding: 8px 9px;
   border: 1px solid #cfcece;
   border-radius: 4px;
   box-sizing: border-box;
@@ -23,16 +23,28 @@ label {
 }
 .tef-input.small {
   font-size: 11px;
+  padding: 6px 9px;
 }
 .tef-input.large {
   font-size: 24px;
+  padding: 7px 14px;
 }
 .tef-input:hover,
 .tef-input:focus,
 .tef-input:active {
-  padding: 6px 8px;
+  padding: 7px 8px;
   border: 2px solid #01b7b4;
   outline: none;
+}
+.tef-input:hover.small,
+.tef-input:focus.small,
+.tef-input:active.small {
+  padding: 5px 8px;
+}
+.tef-input:hover.large,
+.tef-input:focus.large,
+.tef-input:active.large {
+  padding: 6px 13px;
 }
 .tef-input.icon {
   padding-right: 40px;
@@ -47,6 +59,7 @@ label {
   top: 3px;
   left: -37px;
   width: 40px;
+  margin-right: -27px;
 }
 .tef-input.icon + [data-icon]:before {
   font-size: 24px;
@@ -54,6 +67,7 @@ label {
 .tef-input.icon.small + [data-icon] {
   top: 2px;
   left: -32px;
+  margin-right: -22px;
 }
 .tef-input.icon.small + [data-icon]:before {
   font-size: 18px;
@@ -61,6 +75,7 @@ label {
 .tef-input.icon.large + [data-icon] {
   top: 6px;
   left: -40px;
+  margin-right: -30px;
 }
 .tef-input.icon.large + [data-icon]:before {
   font-size: 30px;
@@ -74,36 +89,46 @@ label {
   position: absolute;
   right: 0;
   left: auto;
+  margin-right: 0;
 }
 .tef-message {
   display: inline-block;
   vertical-align: middle;
   color: white;
-  padding: 8px 10px;
+  font-size: 12px;
+  padding: 6px 10px;
   border-radius: 4px;
   box-sizing: border-box;
 }
 .tef-ok input {
-  padding: 6px 8px;
+  padding: 7px 8px;
   border: 2px solid #01b7b4;
+}
+.tef-ok input.small {
+  padding: 5px 8px;
+}
+.tef-ok input.large {
+  padding: 6px 13px;
 }
 .tef-ok .tef-message {
   background-color: #01b7b4;
 }
 .tef-warning input,
-.tef-negative input {
-  padding: 6px 8px;
+.tef-error input {
+  padding: 7px 8px;
   border: 2px solid #990000;
 }
+.tef-warning input.small,
+.tef-error input.small {
+  padding: 5px 8px;
+}
+.tef-warning input.large,
+.tef-error input.large {
+  padding: 6px 13px;
+}
 .tef-warning .tef-message,
-.tef-negative .tef-message {
+.tef-error .tef-message {
   background-color: #990000;
-}
-.tef-input.small + .tef-message {
-  font-size: 11px;
-}
-.tef-input.large + .tef-message {
-  font-size: 24px;
 }
 .tef-input.block + .tef-message {
   margin-top: 5px;
@@ -119,31 +144,50 @@ label {
 .tef-group label {
   display: block;
 }
+.tef-row label.tef-inline,
+.tef-group label.tef-inline {
+  display: inline-block;
+}
 .tef-row > label + *,
 .tef-group > label + *,
 .tef-row > .tef-message,
 .tef-group > .tef-message {
   margin-left: 0;
 }
-.tef-group > * {
+.tef-group > *,
+.tef-group ::content > * {
   border-radius: 0 !important;
 }
 .tef-group > *:first-child,
-.tef-group > *:first-child > button {
+.tef-group ::content > *:first-child,
+.tef-group > *:first-child > button,
+.tef-group ::content > *:first-child > button,
+.tef-group > *:first-child::shadow .tef-button,
+.tef-group ::content > *:first-child::shadow .tef-button {
   border-radius: 4px 0 0 4px !important;
 }
 .tef-group > *:last-child,
-.tef-group > *:last-child > button {
+.tef-group ::content > *:last-child,
+.tef-group > *:last-child > button,
+.tef-group ::content > *:last-child > button,
+.tef-group > *:last-child::shadow .tef-button,
+.tef-group ::content > *:last-child::shadow .tef-button {
   border-radius: 0 4px 4px 0 !important;
 }
-.tef-group > *:first-child:last-child {
+.tef-group > *:first-child:last-child,
+.tef-group ::content > *:first-child:last-child {
   border-radius: 4px !important;
 }
-.tef-group > * ~ * {
+.tef-group > * ~ *,
+.tef-group ::content > * ~ * {
   margin: 0 0 0 -5px !important;
 }
-.tef-group .tef-button + .tef-button {
+.tef-group .tef-button + .tef-button,
+.tef-group ::content tef-button + tef-button::shadow .tef-button {
   border-left-color: white;
+}
+textarea.tef-input {
+  resize: none;
 }
 [disabled],
 .disabled {

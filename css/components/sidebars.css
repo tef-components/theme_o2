@@ -1,10 +1,13 @@
 .tef-sidebar {
+  position: relative;
+  color: #333;
+  background-color: #c5ced3;
+}
+.tef-sidebar.absolute {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
-  color: #333;
-  background-color: #c5ced3;
 }
 .tef-sidebar header {
   font-size: 10px;
@@ -66,7 +69,23 @@
   bottom: 0;
   left: 0;
   z-index: 1;
+  background-color: #beccd4;
+  border-top: 1px solid #e5eaec;
+  color: #364145;
+  padding: 0;
 }
-[data-columns] > .tef-sidebar {
-  float: none;
+.tef-sidebar .tef-toolbar li {
+  padding: 0 5px;
+  border-color: #e5eaec;
+}
+.tef-sidebar .tef-toolbar li:first-child {
+  border-left: none;
+}
+.tef-sidebar .tef-toolbar a {
+  color: #364145;
+}
+.tef-sidebar .tef-toolbar a:hover,
+.tef-sidebar .tef-toolbar a:focus,
+.tef-sidebar .tef-toolbar a:active {
+  background-color: #d1d9dd;
 }
