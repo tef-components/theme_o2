@@ -3754,16 +3754,26 @@ label.tef-switch.right input:checked ~ span:before {
   left: 100%;
   margin: -8px 0 0 -8px;
 }
+.tef-tooltip.left.reverse:before {
+  top: auto;
+  bottom: 50%;
+  margin: 0 0 -16px 8px;
+}
 .tef-tooltip.right:before {
   top: 50%;
-  left: -100%;
-  margin: -16px 0 0 -8px;
+  right: 100%;
+  margin: -16px 8px 0 0;
 }
 .tef-tooltip.right:after {
   border-left: 8px solid #31323b;
   top: 50%;
-  left: -8px;
-  margin-top: -8px;
+  right: 100%;
+  margin: -8px -8px 0 0;
+}
+.tef-tooltip.right.reverse:before {
+  top: auto;
+  bottom: 50%;
+  margin: 0 8px -16px 0;
 }
 .tef-tooltip.bottom:before {
   top: 100%;
@@ -3776,6 +3786,11 @@ label.tef-switch.right input:checked ~ span:before {
   top: 100%;
   margin: -8px 0 0 -8px;
 }
+.tef-tooltip.bottom.reverse:before {
+  right: 50%;
+  left: auto;
+  margin: 8px -16px 0 0;
+}
 .tef-tooltip.top:before {
   bottom: 100%;
   left: 50%;
@@ -3786,6 +3801,11 @@ label.tef-switch.right input:checked ~ span:before {
   left: 50%;
   bottom: 100%;
   margin: 0 0 -8px -8px;
+}
+.tef-tooltip.top.reverse:before {
+  right: 50%;
+  left: auto;
+  margin: 0 -16px 8px 0;
 }
 .tef-tooltip:hover:before,
 .tef-tooltip:focus:before,
