@@ -33,6 +33,7 @@
     "tabs": "tef-components/tabs",
     "toolbars": "tef-components/toolbars",
     "tables": "tef-components/tables",
-    "tooltips": "tef-components/tooltips"
+    "tooltips": "tef-components/tooltips",
+    "lists": "tef-components/lists"
   }
 }

@@ -9,15 +9,7 @@
   bottom: 0;
   left: 0;
 }
-.tef-sidebar header {
-  font-size: 10px;
-  line-height: 12px;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 4px 15px;
-  background-color: #c5ced3;
-}
-.tef-sidebar .tef-list {
+.tef-sidebar.absolute .tef-list {
   overflow: auto;
   position: absolute;
   top: 0;
@@ -25,33 +17,13 @@
   bottom: 0;
   left: 0;
 }
-.tef-sidebar .tef-list ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.tef-sidebar .tef-list li {
-  position: relative;
-  background-color: #d1d9dd;
-  border-bottom: 1px solid #e5eaec;
-  font-size: 12px;
-  line-height: 14px;
-  padding: 12px 15px;
-  box-sizing: border-box;
-}
-.tef-sidebar .tef-list a {
-  display: block;
-  color: #333;
-  text-decoration: none;
-  margin: -12px -15px;
-  padding: 12px 15px;
-}
-.tef-sidebar .tef-list a:hover,
-.tef-sidebar .tef-list a:focus,
-.tef-sidebar .tef-list a:active,
-.tef-sidebar .tef-list a.active {
-  color: #fff;
-  background-color: #9ea5a9;
+.tef-sidebar header {
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 4px 15px;
+  background-color: #c5ced3;
 }
 .tef-sidebar .tef-tabs ~ .tef-list {
   top: 50px;

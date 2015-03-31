@@ -19,7 +19,8 @@ module.exports = function(grunt) {
           'css/components/tabs.css': 'less/tabs.less',
           'css/components/toolbars.css': 'less/toolbars.less',
           'css/components/tables.css': 'less/tables.less',
-          'css/components/toolbars.css': 'less/toolbars.less'
+          'css/components/toolbars.css': 'less/toolbars.less',
+          'css/components/lists.css': 'less/lists.less'
         }
       }
     },
@@ -63,7 +64,8 @@ module.exports = function(grunt) {
           'css/components/tabs.min.css': 'css/components/tabs.css',
           'css/components/toolbars.min.css': 'css/components/toolbars.css',
           'css/components/tables.min.css': 'css/components/tables.css',
-          'css/components/tooltips.min.css': 'css/components/tooltips.css'
+          'css/components/tooltips.min.css': 'css/components/tooltips.css',
+          'css/components/lists.min.css': 'css/components/lists.css'
         }
       }
     },
