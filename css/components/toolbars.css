@@ -35,7 +35,6 @@
   line-height: 40px;
   font-size: 14px;
   text-align: center;
-  text-transform: uppercase;
   padding: 0 15px;
   border-right: 1px solid #ccc;
   white-space: nowrap;
@@ -74,10 +73,15 @@
   border-color: #808080;
 }
 .tef-toolbar.dark a {
-  color: #888;
+  color: white;
 }
 .tef-toolbar.dark a:hover,
 .tef-toolbar.dark a:focus,
 .tef-toolbar.dark a:active {
+  color: #888;
   background-color: #27282f;
+}
+.tef-toolbar .tef-pagination li {
+  padding: 0 5px;
+  border: none;
 }

@@ -3614,7 +3614,6 @@ label.tef-switch.right input:checked ~ span:before {
   line-height: 40px;
   font-size: 14px;
   text-align: center;
-  text-transform: uppercase;
   padding: 0 15px;
   border-right: 1px solid #ccc;
   white-space: nowrap;
@@ -3653,12 +3652,17 @@ label.tef-switch.right input:checked ~ span:before {
   border-color: #808080;
 }
 .tef-toolbar.dark a {
-  color: #888;
+  color: white;
 }
 .tef-toolbar.dark a:hover,
 .tef-toolbar.dark a:focus,
 .tef-toolbar.dark a:active {
+  color: #888;
   background-color: #27282f;
+}
+.tef-toolbar .tef-pagination li {
+  padding: 0 5px;
+  border: none;
 }
 .tef-table {
   width: 100%;
@@ -3713,6 +3717,83 @@ label.tef-switch.right input:checked ~ span:before {
 }
 .tef-table a {
   color: #333;
+}
+.tef-tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tef-tooltip:before {
+  display: none;
+  position: absolute;
+  content: attr(data-text);
+  background-color: #31323b;
+  color: white;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 15px 23px;
+  border-radius: 4px;
+  max-width: 300px;
+  text-align: left;
+  z-index: 50;
+}
+.tef-tooltip:after {
+  display: none;
+  position: absolute;
+  content: "";
+  border: 8px solid transparent;
+  z-index: 50;
+}
+.tef-tooltip.left:before {
+  top: 50%;
+  left: 100%;
+  margin: -16px 0 0 8px;
+}
+.tef-tooltip.left:after {
+  border-right: 8px solid #31323b;
+  top: 50%;
+  left: 100%;
+  margin: -8px 0 0 -8px;
+}
+.tef-tooltip.right:before {
+  top: 50%;
+  left: -100%;
+  margin: -16px 0 0 -8px;
+}
+.tef-tooltip.right:after {
+  border-left: 8px solid #31323b;
+  top: 50%;
+  left: -8px;
+  margin-top: -8px;
+}
+.tef-tooltip.bottom:before {
+  top: 100%;
+  left: 50%;
+  margin: 8px 0 0 -16px;
+}
+.tef-tooltip.bottom:after {
+  border-bottom: 8px solid #31323b;
+  left: 50%;
+  top: 100%;
+  margin: -8px 0 0 -8px;
+}
+.tef-tooltip.top:before {
+  bottom: 100%;
+  left: 50%;
+  margin: 0 0 8px -16px;
+}
+.tef-tooltip.top:after {
+  border-top: 8px solid #31323b;
+  left: 50%;
+  bottom: 100%;
+  margin: 0 0 -8px -8px;
+}
+.tef-tooltip:hover:before,
+.tef-tooltip:focus:before,
+.tef-tooltip.active:before,
+.tef-tooltip:hover:after,
+.tef-tooltip:focus:after,
+.tef-tooltip.active:after {
+  display: block;
 }
 .tef-list ul {
   list-style: none;

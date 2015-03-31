@@ -171,6 +171,9 @@ var setVars = function(){
   CoreStyle.g.shadowReverse =
     "0 -2px 6px rgba(0, 0, 0, 0.3)";
 
+  CoreStyle.g.radius =
+    "4px";
+
   CoreStyle.g.widthXS =
     "480px";
 
