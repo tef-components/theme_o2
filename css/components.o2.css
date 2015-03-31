@@ -2276,7 +2276,7 @@ button::-moz-focus-inner {
   background-color: #2280a6;
   color: white;
   font-size: 15px;
-  line-height: normal;
+  line-height: 18px;
   font-weight: normal;
   text-align: center;
   border: 1px solid #2280a6;
@@ -2309,46 +2309,67 @@ button::-moz-focus-inner {
   background-color: #195f7c;
   border-color: #195f7c;
 }
-.tef-button [data-icon]:before,
-.tef-button ::content [data-icon]:before {
+.tef-button [data-icon]:before {
   position: relative;
   font-size: 23px;
   line-height: 0;
   top: 4px;
 }
 .tef-button [data-icon] + span,
+.tef-button span + [data-icon] {
+  margin-left: 5px;
+}
+.tef-button span {
+  font-size: 15px;
+}
+.tef-button ::content [data-icon]:before {
+  position: relative;
+  font-size: 23px;
+  line-height: 0;
+  top: 4px;
+}
 .tef-button ::content [data-icon] + span,
-.tef-button span + [data-icon],
 .tef-button ::content span + [data-icon] {
   margin-left: 5px;
 }
-.tef-button span,
 .tef-button ::content span {
   font-size: 15px;
 }
 .tef-button.small {
   font-size: 11px;
+  line-height: 13px;
   padding: 6px 9px;
 }
-.tef-button.small [data-icon]:before,
+.tef-button.small [data-icon]:before {
+  font-size: 18px;
+  top: 3px;
+}
+.tef-button.small span {
+  font-size: 11px;
+}
 .tef-button.small ::content [data-icon]:before {
   font-size: 18px;
   top: 3px;
 }
-.tef-button.small span,
 .tef-button.small ::content span {
   font-size: 11px;
 }
 .tef-button.large {
   font-size: 24px;
+  line-height: 29px;
   padding: 7px 14px;
 }
-.tef-button.large [data-icon]:before,
+.tef-button.large [data-icon]:before {
+  font-size: 32px;
+  top: 5px;
+}
+.tef-button.large span {
+  font-size: 24px;
+}
 .tef-button.large ::content [data-icon]:before {
   font-size: 32px;
   top: 5px;
 }
-.tef-button.large span,
 .tef-button.large ::content span {
   font-size: 24px;
 }
@@ -2574,6 +2595,7 @@ label {
   background: white;
   color: black;
   font-size: 15px;
+  line-height: 18px;
   padding: 8px 9px;
   border: 1px solid #cfcece;
   border-radius: 4px;
@@ -2584,10 +2606,12 @@ label {
 }
 .tef-input.small {
   font-size: 11px;
+  line-height: 13px;
   padding: 6px 9px;
 }
 .tef-input.large {
   font-size: 24px;
+  line-height: 29px;
   padding: 7px 14px;
 }
 .tef-input:hover,
@@ -2715,35 +2739,45 @@ label {
 .tef-group > .tef-message {
   margin-left: 0;
 }
-.tef-group > *,
-.tef-group ::content > * {
+.tef-group > * {
   border-radius: 0 !important;
 }
 .tef-group > *:first-child,
-.tef-group ::content > *:first-child,
-.tef-group > *:first-child > button,
-.tef-group ::content > *:first-child > button,
-.tef-group > *:first-child::shadow .tef-button,
-.tef-group ::content > *:first-child::shadow .tef-button {
+.tef-group > *:first-child > button {
   border-radius: 4px 0 0 4px !important;
 }
 .tef-group > *:last-child,
+.tef-group > *:last-child > button {
+  border-radius: 0 4px 4px 0 !important;
+}
+.tef-group > *:first-child:last-child {
+  border-radius: 4px !important;
+}
+.tef-group > * ~ * {
+  margin: 0 0 0 -5px !important;
+}
+.tef-group ::content > * {
+  border-radius: 0 !important;
+}
+.tef-group ::content > *:first-child,
+.tef-group ::content > *:first-child > button,
+.tef-group ::content > *:first-child::shadow .tef-button {
+  border-radius: 4px 0 0 4px !important;
+}
 .tef-group ::content > *:last-child,
-.tef-group > *:last-child > button,
 .tef-group ::content > *:last-child > button,
-.tef-group > *:last-child::shadow .tef-button,
 .tef-group ::content > *:last-child::shadow .tef-button {
   border-radius: 0 4px 4px 0 !important;
 }
-.tef-group > *:first-child:last-child,
 .tef-group ::content > *:first-child:last-child {
   border-radius: 4px !important;
 }
-.tef-group > * ~ *,
 .tef-group ::content > * ~ * {
   margin: 0 0 0 -5px !important;
 }
-.tef-group .tef-button + .tef-button,
+.tef-group .tef-button + .tef-button {
+  border-left-color: white;
+}
 .tef-group ::content tef-button + tef-button::shadow .tef-button {
   border-left-color: white;
 }
@@ -2784,7 +2818,7 @@ textarea.tef-input {
   background-color: #f2f2f2;
   color: black;
   font-size: 15px;
-  line-height: normal;
+  line-height: 18px;
   font-weight: normal;
   border-radius: 4px;
   padding: 8px 40px 8px 9px;
@@ -2816,6 +2850,9 @@ textarea.tef-input {
 .tef-dropdown select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 black;
+}
+.tef-dropdown select::-ms-expand {
+  display: none;
 }
 .tef-dropdown ul {
   display: none;
@@ -2854,6 +2891,7 @@ textarea.tef-input {
 .tef-dropdown.small select,
 .tef-dropdown.small span {
   font-size: 11px;
+  line-height: 13px;
   padding: 6px 40px 6px 9px;
 }
 .tef-dropdown.small:hover select,
@@ -2874,6 +2912,7 @@ textarea.tef-input {
 .tef-dropdown.large select,
 .tef-dropdown.large span {
   font-size: 24px;
+  line-height: 29px;
   padding: 7px 40px 7px 14px;
 }
 .tef-dropdown.large:hover select,
@@ -2910,6 +2949,30 @@ textarea.tef-input {
   margin: 8px 4px 0;
 }
 @-moz-document url-prefix() {
+  .tef-dropdown select {
+    padding: 7px 40px 6px 9px;
+  }
+  .tef-dropdown:hover select,
+  .tef-dropdown:focus select,
+  .tef-dropdown:active select {
+    padding: 6px 39px 5px 8px;
+  }
+  .tef-dropdown.small select {
+    padding: 5px 40px 4px 9px;
+  }
+  .tef-dropdown.small:hover select,
+  .tef-dropdown.small:focus select,
+  .tef-dropdown.small:active select {
+    padding: 4px 39px 3px 8px;
+  }
+  .tef-dropdown.large select {
+    padding: 6px 40px 6px 9px;
+  }
+  .tef-dropdown.large:hover select,
+  .tef-dropdown.large:focus select,
+  .tef-dropdown.large:active select {
+    padding: 5px 39px 5px 8px;
+  }
 }
 label.tef-radio {
   display: inline-block;

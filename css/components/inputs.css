@@ -13,6 +13,7 @@ label {
   background: white;
   color: black;
   font-size: 15px;
+  line-height: 18px;
   padding: 8px 9px;
   border: 1px solid #cfcece;
   border-radius: 4px;
@@ -23,10 +24,12 @@ label {
 }
 .tef-input.small {
   font-size: 11px;
+  line-height: 13px;
   padding: 6px 9px;
 }
 .tef-input.large {
   font-size: 24px;
+  line-height: 29px;
   padding: 7px 14px;
 }
 .tef-input:hover,
@@ -154,35 +157,45 @@ label {
 .tef-group > .tef-message {
   margin-left: 0;
 }
-.tef-group > *,
-.tef-group ::content > * {
+.tef-group > * {
   border-radius: 0 !important;
 }
 .tef-group > *:first-child,
-.tef-group ::content > *:first-child,
-.tef-group > *:first-child > button,
-.tef-group ::content > *:first-child > button,
-.tef-group > *:first-child::shadow .tef-button,
-.tef-group ::content > *:first-child::shadow .tef-button {
+.tef-group > *:first-child > button {
   border-radius: 4px 0 0 4px !important;
 }
 .tef-group > *:last-child,
+.tef-group > *:last-child > button {
+  border-radius: 0 4px 4px 0 !important;
+}
+.tef-group > *:first-child:last-child {
+  border-radius: 4px !important;
+}
+.tef-group > * ~ * {
+  margin: 0 0 0 -5px !important;
+}
+.tef-group ::content > * {
+  border-radius: 0 !important;
+}
+.tef-group ::content > *:first-child,
+.tef-group ::content > *:first-child > button,
+.tef-group ::content > *:first-child::shadow .tef-button {
+  border-radius: 4px 0 0 4px !important;
+}
 .tef-group ::content > *:last-child,
-.tef-group > *:last-child > button,
 .tef-group ::content > *:last-child > button,
-.tef-group > *:last-child::shadow .tef-button,
 .tef-group ::content > *:last-child::shadow .tef-button {
   border-radius: 0 4px 4px 0 !important;
 }
-.tef-group > *:first-child:last-child,
 .tef-group ::content > *:first-child:last-child {
   border-radius: 4px !important;
 }
-.tef-group > * ~ *,
 .tef-group ::content > * ~ * {
   margin: 0 0 0 -5px !important;
 }
-.tef-group .tef-button + .tef-button,
+.tef-group .tef-button + .tef-button {
+  border-left-color: white;
+}
 .tef-group ::content tef-button + tef-button::shadow .tef-button {
   border-left-color: white;
 }
