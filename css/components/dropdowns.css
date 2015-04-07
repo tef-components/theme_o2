@@ -145,7 +145,7 @@
 .tef-dropdown.block span {
   width: 100%;
 }
-.tef-dropdown[data-icon] {
+.tef-dropdown[icon] {
   text-align: left;
 }
 .tef-dropdown.up:before {

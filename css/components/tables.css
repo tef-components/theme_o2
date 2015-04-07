@@ -18,7 +18,7 @@
 .tef-table thead th {
   border-left: 1px solid #ccc;
 }
-.tef-table thead [data-icon] {
+.tef-table thead [icon] {
   color: #01b7b4;
   padding-left: 10px;
 }

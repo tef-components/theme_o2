@@ -107,7 +107,7 @@
 .tef-header li a:active span {
   text-decoration: underline;
 }
-.tef-header li [data-icon] {
+.tef-header li [icon] {
   color: #6f9ebc;
   padding-left: 4px;
   font-size: 16px;

@@ -57,38 +57,38 @@ label {
 .tef-input.icon:active {
   padding-right: 39px;
 }
-.tef-input.icon + [data-icon] {
+.tef-input.icon + [icon] {
   position: relative;
   top: 3px;
   left: -37px;
   width: 40px;
   margin-right: -27px;
 }
-.tef-input.icon + [data-icon]:before {
+.tef-input.icon + [icon]:before {
   font-size: 24px;
 }
-.tef-input.icon.small + [data-icon] {
+.tef-input.icon.small + [icon] {
   top: 2px;
   left: -32px;
   margin-right: -22px;
 }
-.tef-input.icon.small + [data-icon]:before {
+.tef-input.icon.small + [icon]:before {
   font-size: 18px;
 }
-.tef-input.icon.large + [data-icon] {
+.tef-input.icon.large + [icon] {
   top: 6px;
   left: -40px;
   margin-right: -30px;
 }
-.tef-input.icon.large + [data-icon]:before {
+.tef-input.icon.large + [icon]:before {
   font-size: 30px;
 }
 .tef-input.block {
   width: 100%;
 }
-.tef-input.block + [data-icon],
-.tef-input.block.small + [data-icon],
-.tef-input.block.large + [data-icon] {
+.tef-input.block + [icon],
+.tef-input.block.small + [icon],
+.tef-input.block.large + [icon] {
   position: absolute;
   right: 0;
   left: auto;

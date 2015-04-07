@@ -16,6 +16,7 @@
   float: left;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 .tef-toolbar ul:before,
 .tef-toolbar ul:after {
@@ -37,9 +38,6 @@
   text-align: center;
   padding: 0 15px;
   border-right: 1px solid #ccc;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .tef-toolbar li:first-child {
   border-left: 1px solid #ccc;
@@ -48,12 +46,18 @@
   border: none;
   padding: 0;
 }
-.tef-toolbar li [data-icon] {
+.tef-toolbar li [icon] {
   font-size: 24px;
+}
+.tef-toolbar li > * {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .tef-toolbar a {
   display: block;
   margin: 0 -15px;
+  height: 100%;
   color: #333;
   text-decoration: none;
 }

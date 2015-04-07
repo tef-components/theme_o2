@@ -38,12 +38,14 @@
   border-radius: 4px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
-.tef-dialog header {
+.tef-dialog header,
+.tef-dialog ::content header {
   font-size: 26px;
   line-height: 28px;
   margin-bottom: 35px;
 }
-.tef-dialog .tef-close {
+.tef-dialog .tef-close,
+.tef-dialog ::content .tef-close {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -56,12 +58,15 @@
   cursor: pointer;
   border-radius: 50%;
 }
-.tef-dialog footer {
+.tef-dialog footer,
+.tef-dialog ::content footer {
   margin-top: 25px;
 }
-.tef-dialog footer .tef-button {
+.tef-dialog footer .tef-button,
+.tef-dialog ::content footer .tef-button {
   min-width: 120px;
 }
-.tef-dialog footer .tef-button + .tef-button {
+.tef-dialog footer .tef-button + .tef-button,
+.tef-dialog ::content footer .tef-button + .tef-button {
   margin-left: 7px;
 }

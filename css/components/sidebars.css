@@ -31,7 +31,7 @@
 .tef-sidebar .tef-tabs ~ .tef-list {
   bottom: 40px;
 }
-.tef-sidebar .tef-input.block + [data-icon] {
+.tef-sidebar .tef-input.block + [icon] {
   top: 18px;
   right: 15px;
 }
