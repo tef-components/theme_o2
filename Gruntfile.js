@@ -8,6 +8,7 @@ module.exports = function(grunt) {
           'css/components.o2.css': 'less/theme.less',
           'templates/variables.css': 'templates/variables.less',
           'css/components/buttons.css': 'less/buttons.less',
+          'css/web_components/tef_button.css': 'less/tef_button.less',
           'css/components/button-groups.css': 'less/button-groups.less',
           'css/components/dropdowns.css': 'less/dropdowns.less',
           'css/components/inputs.css': 'less/inputs.less',
@@ -53,6 +54,7 @@ module.exports = function(grunt) {
         files: {
           'css/components.o2.min.css': 'css/components.o2.css',
           'css/components/buttons.min.css': 'css/components/buttons.css',
+          'css/web_components/tef_button.min.css': 'css/web_components/tef_button.css',
           'css/components/button-groups.min.css': 'css/components/button-groups.css',
           'css/components/dropdowns.min.css': 'css/components/dropdowns.css',
           'css/components/inputs.min.css': 'css/components/inputs.css',

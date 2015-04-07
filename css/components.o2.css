@@ -2306,19 +2306,6 @@ button::-moz-focus-inner {
 .tef-button span {
   font-size: 15px;
 }
-.tef-button ::content [icon]:before {
-  position: relative;
-  font-size: 23px;
-  line-height: 0;
-  top: 4px;
-}
-.tef-button ::content [icon] + span,
-.tef-button ::content span + [icon] {
-  margin-left: 5px;
-}
-.tef-button ::content span {
-  font-size: 15px;
-}
 .tef-button.small {
   font-size: 11px;
   line-height: 13px;
@@ -2329,13 +2316,6 @@ button::-moz-focus-inner {
   top: 3px;
 }
 .tef-button.small span {
-  font-size: 11px;
-}
-.tef-button.small ::content [icon]:before {
-  font-size: 18px;
-  top: 3px;
-}
-.tef-button.small ::content span {
   font-size: 11px;
 }
 .tef-button.large {
@@ -2350,114 +2330,22 @@ button::-moz-focus-inner {
 .tef-button.large span {
   font-size: 24px;
 }
-.tef-button.large ::content [icon]:before {
-  font-size: 32px;
-  top: 5px;
-}
-.tef-button.large ::content span {
-  font-size: 24px;
-}
-.tef-button .colors-loop.significant {
+.tef-button.positive {
   background-color: #01b7b4;
   color: white;
   border-color: #01b7b4;
 }
-.tef-button .colors-loop.significant:hover,
-.tef-button .colors-loop.significant:focus {
+.tef-button.positive:hover,
+.tef-button.positive:focus {
   background-color: #019e9b;
   color: white;
   border-color: #019e9b;
 }
-.tef-button .colors-loop.significant:active,
-.tef-button .colors-loop.significant.active {
+.tef-button.positive:active,
+.tef-button.positive.active {
   background-color: #018482;
   color: white;
   border-color: #018482;
-}
-.tef-button .colors-loop.subdued {
-  background-color: #686868;
-  color: white;
-  border-color: #686868;
-}
-.tef-button .colors-loop.subdued:hover,
-.tef-button .colors-loop.subdued:focus {
-  background-color: #5b5b5b;
-  color: white;
-  border-color: #5b5b5b;
-}
-.tef-button .colors-loop.subdued:active,
-.tef-button .colors-loop.subdued.active {
-  background-color: #4f4f4f;
-  color: white;
-  border-color: #4f4f4f;
-}
-.tef-button .colors-loop.negative {
-  background-color: #990000;
-  color: white;
-  border-color: #990000;
-}
-.tef-button .colors-loop.negative:hover,
-.tef-button .colors-loop.negative:focus {
-  background-color: #800000;
-  color: white;
-  border-color: #800000;
-}
-.tef-button .colors-loop.negative:active,
-.tef-button .colors-loop.negative.active {
-  background-color: #660000;
-  color: white;
-  border-color: #660000;
-}
-.tef-button .colors-loop.positive {
-  background-color: #01b7b4;
-  color: white;
-  border-color: #01b7b4;
-}
-.tef-button .colors-loop.positive:hover,
-.tef-button .colors-loop.positive:focus {
-  background-color: #019e9b;
-  color: white;
-  border-color: #019e9b;
-}
-.tef-button .colors-loop.positive:active,
-.tef-button .colors-loop.positive.active {
-  background-color: #018482;
-  color: white;
-  border-color: #018482;
-}
-.tef-button.significant {
-  background-color: #01b7b4;
-  color: white;
-  border-color: #01b7b4;
-}
-.tef-button.significant:hover,
-.tef-button.significant:focus {
-  background-color: #019e9b;
-  color: white;
-  border-color: #019e9b;
-}
-.tef-button.significant:active,
-.tef-button.significant.active {
-  background-color: #018482;
-  color: white;
-  border-color: #018482;
-}
-.tef-button.subdued {
-  background-color: #686868;
-  color: white;
-  border-color: #686868;
-}
-.tef-button.subdued:hover,
-.tef-button.subdued:focus {
-  background-color: #5b5b5b;
-  color: white;
-  border-color: #5b5b5b;
-}
-.tef-button.subdued:active,
-.tef-button.subdued.active {
-  background-color: #4f4f4f;
-  color: white;
-  border-color: #4f4f4f;
 }
 .tef-button.negative {
   background-color: #990000;
@@ -2476,19 +2364,36 @@ button::-moz-focus-inner {
   color: white;
   border-color: #660000;
 }
-.tef-button.positive {
+.tef-button.subdued {
+  background-color: #686868;
+  color: white;
+  border-color: #686868;
+}
+.tef-button.subdued:hover,
+.tef-button.subdued:focus {
+  background-color: #5b5b5b;
+  color: white;
+  border-color: #5b5b5b;
+}
+.tef-button.subdued:active,
+.tef-button.subdued.active {
+  background-color: #4f4f4f;
+  color: white;
+  border-color: #4f4f4f;
+}
+.tef-button.significant {
   background-color: #01b7b4;
   color: white;
   border-color: #01b7b4;
 }
-.tef-button.positive:hover,
-.tef-button.positive:focus {
+.tef-button.significant:hover,
+.tef-button.significant:focus {
   background-color: #019e9b;
   color: white;
   border-color: #019e9b;
 }
-.tef-button.positive:active,
-.tef-button.positive.active {
+.tef-button.significant:active,
+.tef-button.significant.active {
   background-color: #018482;
   color: white;
   border-color: #018482;
