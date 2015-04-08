@@ -44,6 +44,13 @@ module.exports = function(grunt) {
         dest: 'css/components.o2.css'
       }
     },
+    
+    copy: {
+      eot: {
+        src: '../icons/fonts/icons.eot',
+        dest: 'css/icons.eot',
+      }
+    },
 
     cssmin: {
       options: {
@@ -216,6 +223,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('release', [
+    'copy',
     'replace:preless',
     'replace:import',
     'less',
