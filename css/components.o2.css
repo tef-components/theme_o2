@@ -2445,36 +2445,47 @@ label {
   border-radius: 4px;
   box-sizing: border-box;
 }
-.tef-ok input,
-.tef-warning input,
-.tef-error input {
+.tef-ok .tef-input,
+.tef-warning .tef-input,
+.tef-error .tef-input {
   padding: 7px 8px;
   border-width: 2px;
   border-style: solid;
 }
-.tef-ok input.small,
-.tef-warning input.small,
-.tef-error input.small {
+.tef-ok .tef-input.small,
+.tef-warning .tef-input.small,
+.tef-error .tef-input.small {
   padding: 5px 8px;
 }
-.tef-ok input.large,
-.tef-warning input.large,
-.tef-error input.large {
+.tef-ok .tef-input.large,
+.tef-warning .tef-input.large,
+.tef-error .tef-input.large {
   padding: 6px 13px;
 }
-.tef-ok input {
+.tef-ok .tef-input:hover,
+.tef-warning .tef-input:hover,
+.tef-error .tef-input:hover,
+.tef-ok .tef-input:focus,
+.tef-warning .tef-input:focus,
+.tef-error .tef-input:focus,
+.tef-ok .tef-input:active,
+.tef-warning .tef-input:active,
+.tef-error .tef-input:active {
+  border-color: #01b7b4;
+}
+.tef-ok .tef-input {
   border-color: #01b7b4;
 }
 .tef-ok .tef-message {
   background-color: #01b7b4;
 }
-.tef-warning input {
+.tef-warning .tef-input {
   border-color: #f0ad4e;
 }
 .tef-warning .tef-message {
   background-color: #f0ad4e;
 }
-.tef-error input {
+.tef-error .tef-input {
   border-color: #990000;
 }
 .tef-error .tef-message {
