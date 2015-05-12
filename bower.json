@@ -11,16 +11,11 @@
   "ignore": [
     "bower.json",
     ".gitignore",
-    "README.md",
-    "Gruntfile.js",
-    "package.json",
-    "node_modules",
-    "bower_components"
+    "node_modules"
   ],
   "dependencies": {
     "icons": "tef-components/icons",
     "buttons": "tef-components/buttons",
-    "button-groups": "tef-components/button-groups",
     "inputs": "tef-components/inputs",
     "dropdowns": "tef-components/dropdowns",
     "checkboxes": "tef-components/checkboxes",
