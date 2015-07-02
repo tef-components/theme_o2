@@ -1333,6 +1333,7 @@ button::-moz-focus-inner {
   display: inline-block;
   vertical-align: middle;
   min-width: 35px;
+  width: auto;
   background-image: none;
   background-color: #2280a6;
   color: white;
@@ -1364,7 +1365,6 @@ button::-moz-focus-inner {
   border-color: #1e7091;
   outline: none;
 }
-.tc-button:active,
 .tc-button.active {
   color: white;
   background-color: #195f7c;
@@ -1423,7 +1423,6 @@ button::-moz-focus-inner {
   color: white;
   border-color: #019e9b;
 }
-.tc-button.positive:active,
 .tc-button.positive.active {
   background-color: #018482;
   color: white;
@@ -1440,7 +1439,6 @@ button::-moz-focus-inner {
   color: white;
   border-color: #800000;
 }
-.tc-button.negative:active,
 .tc-button.negative.active {
   background-color: #660000;
   color: white;
@@ -1457,7 +1455,6 @@ button::-moz-focus-inner {
   color: white;
   border-color: #5b5b5b;
 }
-.tc-button.subdued:active,
 .tc-button.subdued.active {
   background-color: #4f4f4f;
   color: white;
@@ -1474,7 +1471,6 @@ button::-moz-focus-inner {
   color: white;
   border-color: #019e9b;
 }
-.tc-button.significant:active,
 .tc-button.significant.active {
   background-color: #018482;
   color: white;
@@ -1484,8 +1480,66 @@ button::-moz-focus-inner {
   display: block;
   width: 100%;
 }
-.tc-button + .tc-button {
+.tc-button + .tc-button,
+.tc-button + .tc-link {
   margin-left: 6px;
+}
+.tc-link {
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 35px;
+  width: auto;
+  background: none;
+  color: #2280a6;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: normal;
+  text-align: center;
+  border: none;
+  padding: 9px 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-decoration: underline;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  box-sizing: border-box;
+  text-transform: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tc-link:hover,
+.tc-link:focus {
+  color: #195f7c;
+}
+.tc-link.small {
+  font-size: 11px;
+  line-height: 13px;
+}
+.tc-link.large {
+  font-size: 24px;
+  line-height: 29px;
+}
+.tc-link + .tc-button,
+.tc-link + .tc-link {
+  margin-left: 6px;
+}
+[columns] > .tc-button {
+  padding: 8px 9px;
+  margin: 0 8px;
+}
+[columns] > .tc-button.small {
+  padding: 6px 9px;
+}
+[columns] > .tc-button.large {
+  padding: 7px 14px;
+}
+[columns] > .tc-link {
+  padding: 9px 0;
+  margin: 0 8px;
 }
 label {
   color: #686868;
